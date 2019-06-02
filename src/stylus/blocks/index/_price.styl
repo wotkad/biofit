@@ -1,0 +1,181 @@
+.price
+	padding 65px 0
+	background-color $white
+	position relative
+	z-index 3
+	overflow hidden
+	&__container
+		&-titles
+			display flex
+			justify-content space-between
+			margin-bottom 50px
+			&-title
+				font-family $Black
+				font-size 2.625rem
+				line-height 63px
+				color $text
+				text-align left
+			&-item
+				display flex
+				align-items center
+				&-container
+					box-shadow 0px 5px 60px rgba(0, 0, 0, 0.1)
+					background-color $white
+					position relative
+					padding 20px 40px
+					display flex
+					align-items center
+					border-radius 10px 10px 10px 0
+					&:before
+						content ''
+						position absolute
+						left -15px
+						bottom 0
+						border 10px solid transparent
+						border-right 10px solid $white
+						border-bottom 10px solid $white
+					& span
+						&:nth-child(1)
+							font-family $Regular
+							color $text
+							line-height 23px
+							font-size 1.125rem
+							margin-right 3px
+						&:nth-child(2)
+							font-family $Bold
+							color $green
+							line-height 23px
+							font-size 1.125rem
+							margin-right 10px
+		&-slider
+			width 100%
+			.swiper-container
+				overflow visible
+			.swiper-slide
+				&:nth-child(4)
+					.price__container-slider-slide
+						.price-footer
+							background $green
+							&:before
+								border-right 10px solid $green
+								border-bottom 10px solid $green
+
+				&:last-child
+					.price__container-slider-slide
+						.price-content
+							&-sale
+								& span
+									&:nth-child(1)
+										background linear-gradient(0.11deg, #74C361 0.23%, #84D96F 99.7%)
+			&-slide
+				display flex
+				flex-wrap wrap
+				justify-content flex-end
+				.price-content
+					flex-basis 100%
+					position relative
+					border 1px solid #F3F3F3
+					padding 25px 30px
+					margin-bottom 15px
+					border-radius 10px
+					background-color $white
+					transition .3s
+					&:hover
+						box-shadow 0px 0px 20px rgba(105, 166, 223, 0.1)
+					&-title
+						color #313131
+						margin-bottom 20px
+						font-family $Black
+						line-height 24px
+						font-size 1.5rem
+					&-subtitle
+						color rgba(83, 83, 83, 0.6)
+						margin-bottom 6px
+						font-family $Black
+						line-height 14px
+						font-size 0.825rem
+					&-price
+						color $text
+						margin-bottom 20px
+						font-family $Bold
+						line-height 24px
+						font-size 1.5rem
+					&-total
+						color #313131
+						font-family $Black
+						line-height 24px
+						font-size 1.5rem
+					&-button
+						background linear-gradient(180deg, #FDC128 0%, #FC7B32 100%)
+						border-radius 8px
+						transition .3s
+						display none
+						align-items center
+						justify-content center
+						padding 14px
+						& span
+							font-size 1.125rem
+							color $white
+							font-family $Black
+							line-height 18px
+							transition .3s
+						&:hover
+							box-shadow 0px 10px 20px rgba(252, 123, 50, 0.3)
+						&:hover span
+							color $text
+					&-sale
+						position absolute
+						right 30px
+						top 25px
+						display flex
+						justify-content flex-end
+						flex-direction column
+						& span
+							&:nth-child(1)
+								background linear-gradient(0.11deg, #5692CA 0.23%, #69A6DF 99.7%)
+								border-radius 5px
+								display flex
+								align-items center
+								justify-content center
+								font-family $Black
+								color $white
+								padding 5px 10px
+								font-size 0.825rem
+								margin-bottom 8px
+							&:nth-child(2)
+								text-align right
+								color $text
+								text-transform lowercase
+								font-family $Black
+								font-size 0.625rem
+								line-height 10px
+					&:hover
+						.price-content-button
+							display flex
+						.price-content-total
+							margin-bottom 20px
+				.price-footer
+					background-color #69A6DF
+					padding 20px
+					flex-basis 90%
+					display flex
+					align-items center
+					justify-content center
+					border-radius 10px 10px 10px 0
+					position relative
+					& span
+						font-family $Bold
+						font-size 1.125rem
+						line-height 18px
+						margin-right 13px
+						color $white
+					&:before
+						content ''
+						position absolute
+						left -15px
+						bottom 0
+						border 10px solid transparent
+						border-right 10px solid #69A6DF
+						border-bottom 10px solid #69A6DF
+
+

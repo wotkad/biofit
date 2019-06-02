@@ -1,0 +1,98 @@
+.faq
+	padding 60px 0 0
+	position relative
+	z-index 3
+	overflow hidden
+	&__container
+		display flex
+		justify-content space-between
+		&-item
+			position relative
+			&-text
+				position relative
+				z-index 2
+				& p
+					font-size 1rem
+					line-height 24px
+					font-family $Regular
+					color $text
+					margin-bottom 10px
+			&-img
+				z-index 1
+				position absolute
+				bottom -120px
+			&:nth-child(1)
+				flex-basis 65%
+				.faq__container-item-title
+					width 60%
+			&:nth-child(2)
+				flex-basis 30%
+			&-title
+				font-family $Black
+				font-size 2.625rem
+				line-height 54px
+				color $text
+				text-align left
+				margin-bottom 25px
+			&-items
+				display flex
+				margin-bottom 15px
+				&-item
+					font-family $Black
+					color $text
+					line-height 18px
+					font-size 1.125rem
+					padding 15px 25px
+					border-radius 80px
+					margin-right 20px
+					cursor pointer
+					transition .3s
+					border 1px solid #f1f1f1
+					&:hover
+						color $white
+						border-color transparent
+						background-color #74C361
+			&-toggle
+				display flex
+				flex-wrap wrap
+				margin-bottom 78px
+				&-item
+					flex-basis 100%
+					flex-wrap wrap
+					display flex
+					justify-content space-between
+					align-items center
+					transition .3s
+					border-bottom 1px solid #EFEFEF
+					& span
+						font-family $Bold
+						font-size 1.125rem
+						cursor pointer
+						display flex
+						flex-basis 100%
+						align-items center
+						justify-content space-between
+						line-height 18px
+						color #313131
+						padding 20px 0
+						transition .3s
+						& svg
+							transition .3s
+						&:hover
+							color $green
+					&-text
+						display none
+						flex-basis 100%
+						padding-bottom 20px
+						font-size 1rem
+						font-family $Regular
+						color $text
+						line-height 26px
+					&-active
+						border-color $green
+						& span
+							color $green
+							& svg
+								transform rotate(180deg)
+						.faq__container-item-toggle-item-text
+							display block

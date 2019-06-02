@@ -1,0 +1,222 @@
+.reviews {
+  padding: 75px 0 0;
+  background-color: $white;
+  position: relative;
+  z-index: 8;
+  overflow: hidden;
+}
+.reviews__container {
+  padding-bottom: 60px;
+  border-bottom: 1px solid #f0f0f0;
+}
+.reviews__container-titles {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 50px;
+}
+.reviews__container-titles-title {
+  font-family: $Black;
+  font-size: 2.625rem;
+  line-height: 63px;
+  color: $text;
+  text-align: left;
+}
+.reviews__container-titles-item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.reviews__container-titles-item-container {
+  -webkit-box-shadow: 0px 5px 60px rgba(0,0,0,0.1);
+          box-shadow: 0px 5px 60px rgba(0,0,0,0.1);
+  background-color: $white;
+  position: relative;
+  padding: 20px 40px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-border-radius: 10px 10px 10px 0;
+          border-radius: 10px 10px 10px 0;
+}
+.reviews__container-titles-item-container:before {
+  content: '';
+  position: absolute;
+  left: -15px;
+  bottom: 0;
+  border: 10px solid transparent;
+  border-right: 10px solid $white;
+  border-bottom: 10px solid $white;
+}
+.reviews__container-titles-item-container span:nth-child(1) {
+  font-family: $Regular;
+  color: $text;
+  line-height: 23px;
+  font-size: 1.125rem;
+  margin-right: 3px;
+}
+.reviews__container-titles-item-container span:nth-child(2) {
+  font-family: $Bold;
+  color: $green;
+  line-height: 23px;
+  font-size: 1.125rem;
+  margin-right: 5px;
+}
+.reviews__container-slider .swiper-container {
+  overflow: visible;
+}
+.reviews__container-slider-slide {
+  -webkit-box-shadow: 0px 10px 60px rgba(0,0,0,0.08);
+          box-shadow: 0px 10px 60px rgba(0,0,0,0.08);
+  border: 1px solid #f3f3f3;
+  padding: 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.reviews__container-slider-slide .slide__photos {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-basis: 47%;
+      -ms-flex-preferred-size: 47%;
+          flex-basis: 47%;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+.reviews__container-slider-slide .slide__photos-item {
+  -webkit-flex-basis: 49%;
+      -ms-flex-preferred-size: 49%;
+          flex-basis: 49%;
+  position: relative;
+  -webkit-border-radius: 4px;
+          border-radius: 4px;
+}
+.reviews__container-slider-slide .slide__photos-item img {
+  width: 100%;
+}
+.reviews__container-slider-slide .slide__photos-item span {
+  padding: 4px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#f2f2f2));
+  background: -webkit-linear-gradient(top, #fff 0%, #f2f2f2 100%);
+  background: -o-linear-gradient(top, #fff 0%, #f2f2f2 100%);
+  background: linear-gradient(180deg, #fff 0%, #f2f2f2 100%);
+  font-size: 0.625rem;
+  line-height: 10px;
+  color: $text;
+  position: absolute;
+  font-family: $Black;
+  -webkit-border-radius: 2px;
+          border-radius: 2px;
+  top: 10px;
+  left: 10px;
+}
+.reviews__container-slider-slide .slide__photos-info {
+  margin-top: 15px;
+  -webkit-flex-basis: 100%;
+      -ms-flex-preferred-size: 100%;
+          flex-basis: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.reviews__container-slider-slide .slide__photos-info span {
+  color: $white;
+  font-family: $Black;
+  font-size: 1.125rem;
+  line-height: 18px;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  text-align: center;
+  padding: 13px 0;
+  -webkit-flex-basis: 30%;
+      -ms-flex-preferred-size: 30%;
+          flex-basis: 30%;
+  -webkit-box-shadow: 0px 15px 25px rgba(49,49,49,0.1);
+          box-shadow: 0px 15px 25px rgba(49,49,49,0.1);
+  background: -webkit-linear-gradient(89.81deg, #5692ca 0.23%, #69a6df 99.7%);
+  background: -o-linear-gradient(89.81deg, #5692ca 0.23%, #69a6df 99.7%);
+  background: linear-gradient(0.19deg, #5692ca 0.23%, #69a6df 99.7%);
+}
+.reviews__container-slider-slide .slide__photos-info a {
+  color: $white;
+  font-family: $Black;
+  font-size: 1.125rem;
+  line-height: 18px;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  padding: 13px 0;
+  text-align: center;
+  -webkit-flex-basis: 65%;
+      -ms-flex-preferred-size: 65%;
+          flex-basis: 65%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fdc128), to(#fc7b32));
+  background: -webkit-linear-gradient(top, #fdc128 0%, #fc7b32 100%);
+  background: -o-linear-gradient(top, #fdc128 0%, #fc7b32 100%);
+  background: linear-gradient(180deg, #fdc128 0%, #fc7b32 100%);
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.reviews__container-slider-slide .slide__photos-info a:hover {
+  color: $text;
+  -webkit-box-shadow: 0px 10px 20px rgba(252,123,50,0.4);
+          box-shadow: 0px 10px 20px rgba(252,123,50,0.4);
+}
+.reviews__container-slider-slide .slide__content {
+  -webkit-flex-basis: 47%;
+      -ms-flex-preferred-size: 47%;
+          flex-basis: 47%;
+}
+.reviews__container-slider-slide .slide__content-title {
+  font-size: 1.5rem;
+  line-height: 24px;
+  color: #313131;
+  font-family: $Black;
+  margin-bottom: 5px;
+}
+.reviews__container-slider-slide .slide__content-age {
+  font-size: 1rem;
+  line-height: 16px;
+  color: #313131;
+  font-family: $Regular;
+  margin-bottom: 15px;
+}
+.reviews__container-slider-slide .slide__content-text {
+  font-size: 0.825rem;
+  line-height: 14px;
+  color: #717171;
+  font-family: $Regular;
+}

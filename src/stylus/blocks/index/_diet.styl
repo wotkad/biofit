@@ -1,0 +1,400 @@
+.diet
+	padding 90px 0 0 0
+	background-color #F8F8F8
+	position relative
+	z-index 3
+	&-line
+		position absolute
+		bottom -10px
+		width 100%
+		z-index 4
+		left 0
+	&__container
+		&-titles
+			display flex
+			justify-content space-between
+			margin-bottom 50px
+			&-title
+				font-family $Black
+				font-size 2.625rem
+				line-height 63px
+				color $text
+				text-align left
+			&-item
+				display flex
+				align-items center
+				&-container
+					box-shadow 0px 5px 60px rgba(0, 0, 0, 0.1)
+					background-color $white
+					position relative
+					padding 20px 40px
+					display flex
+					align-items center
+					border-radius 10px 10px 10px 0
+					&:before
+						content ''
+						position absolute
+						left -15px
+						bottom 0
+						border 10px solid transparent
+						border-right 10px solid $white
+						border-bottom 10px solid $white
+					& span
+						&:nth-child(1)
+							font-family $Regular
+							color $text
+							line-height 23px
+							font-size 1.125rem
+							margin-right 3px
+						&:nth-child(2)
+							font-family $Bold
+							color $green
+							line-height 23px
+							font-size 1.125rem
+							margin-right 10px
+
+		&-form
+			display flex
+			flex-wrap wrap
+			&-title
+				flex-basis 100%
+				font-family $Black
+				font-size 0.825rem
+				line-height 18px
+				color $text
+				margin-bottom 15px
+			& input
+				display none
+			.diet__input
+				margin-bottom 40px
+				flex-basis calc(21% - 20px)
+				position relative
+				margin-right 20px
+				transition .3s
+				cursor pointer
+				box-shadow 0px 20px 30px rgba(0, 0, 0, 0.1)
+				&:nth-child(2)
+					background-color #A3DE5B
+				&:nth-child(3)
+					background-color #FDC128
+				&:nth-child(4)
+					background-color #2ABEFD
+				&-bg
+					position absolute
+					height 100%
+					width 100%
+					top 0
+					left 0
+					right 0
+					bottom 0
+					overflow hidden
+					&:after
+						position absolute
+						content ''
+						background linear-gradient(180deg, rgba(0,0,0,.1) 0%, rgba(0,0,0,0) 100%)
+						left -20px
+						transform skewx(-10deg)
+						top 0
+						bottom 0
+						width 70px
+				&-text
+					z-index 1
+					position relative
+					font-size 0.75rem
+					color $white
+					line-height 12px
+					font-family $Light
+					flex-basis 60%
+					margin-top 18px
+				&-title
+					z-index 1
+					position relative
+					font-size 1.0625rem
+					line-height 17px
+					color $white
+					text-transform uppercase
+					flex-basis 100%
+					font-family $Black
+					margin-bottom 8px
+				&-img
+					position absolute
+					right 0
+					z-index 2
+					bottom 0
+					& img
+						position absolute
+						right -13px
+						bottom -5px
+			& label
+				cursor pointer
+				display flex
+				justify-content space-between
+				position relative
+				flex-wrap wrap
+				align-items center
+				height 100%
+				border 5px solid transparent
+				transition .3s
+				padding 11px
+				&:hover
+					border-color $white
+			.diet__type
+				width 173px
+				height 60px
+				margin-right 20px
+				background-color $white
+				border-radius 80px
+				margin-bottom 45px
+				transition .3s
+				&:hover
+					background-color $green
+					box-shadow 0px 15px 25px rgba(156, 217, 143, 0.4)
+					& label
+						& span
+							color $white
+				&:nth-child(11)
+					margin-right 0
+				& label
+					cursor pointer
+					display flex
+					align-items center
+					justify-content center
+					border none
+					& span
+						flex-basis 100%
+						text-align center
+						font-family $Bold
+						font-size 1.125rem
+						line-height 23px
+						color #313131
+						transition .3s
+			.diet__blocks
+				flex-basis 100%
+				display flex
+				justify-content space-between
+				overflow hidden
+				&-block
+					flex-basis 48%
+					display flex
+					flex-wrap wrap
+					position relative
+					&__type
+						width 173px
+						height 60px
+						margin-right 20px
+						background-color $white
+						border-radius 80px
+						margin-bottom 34px
+						transition .3s
+						&:hover
+							background-color $green
+							box-shadow 0px 15px 25px rgba(156, 217, 143, 0.4)
+							& label
+								& span
+									color $white
+						&:nth-child(11)
+							margin-right 0
+						& label
+							cursor pointer
+							display flex
+							align-items center
+							justify-content center
+							border none
+							padding 6px
+							& span
+								flex-basis 100%
+								text-align center
+								font-family $Bold
+								font-size 1.125rem
+								line-height 23px
+								color #313131
+								transition .3s
+					&-title
+						flex-basis 100%
+						font-family $Black
+						font-size 0.825rem
+						line-height 18px
+						color $text
+						margin-bottom 15px
+					&-text
+						flex-basis 100%
+						margin-bottom 25px
+						& p
+							font-family $Regular
+							color $text
+							font-size 1rem
+							line-height 26px
+							margin-bottom 15px
+							& strong
+								margin-left 3px
+								font-family $Bold
+					&-stats
+						margin-bottom 40px
+						flex-basis 100%
+						display flex
+						justify-content flex-start
+						&-stat
+							flex-basis 25%
+							display flex
+							align-items center
+							&-item
+								margin-right 15px
+								position relative
+								width 52px
+								height 52px
+								border 2px solid rgba(116, 195, 97, 0.3)
+								border-radius 50%
+								display flex
+								align-items center
+								justify-content center
+								& span
+									font-family $Black
+									font-size 0.825rem
+									line-height 16px
+									color $text
+								&:after
+									position absolute
+									font-family $Black
+									font-size 2.375rem
+									line-height 40px
+									color rgba(116, 195, 97, 0.2)
+							&-text
+								font-family $Regular
+								font-size 0.825rem
+								line-height 16px
+								color $text
+							&:nth-child(1)
+								.diet__blocks-block-stats-stat-item
+									&:after
+										content 'Б'
+							&:nth-child(2)
+								.diet__blocks-block-stats-stat-item
+									&:after
+										content 'Ж'
+							&:nth-child(3)
+								.diet__blocks-block-stats-stat-item
+									&:after
+										content 'У'
+					&-footer
+						flex-basis 100%
+						display flex
+						align-items center
+						margin-bottom 54px
+						&-button
+							flex-basis 45%
+							& button
+								font-family $Black
+								color $white
+								cursor pointer
+								padding 15px
+								width 100%
+								background-color $green
+								font-size 1.125rem
+								line-height 24px
+								border-radius 80px
+								border none
+								border 1px solid transparent
+								transition .3s
+								&:hover
+									color $green
+									background $white
+									border-color $green
+						&-totals
+							flex-basis 45%
+							display flex
+							align-items center
+							margin-left 40px
+							& span
+								font-size 1.25rem
+								line-height 25px
+								&:nth-child(1)
+									font-family $Bold
+									color $black
+									margin-right 5px
+								&:nth-child(2)
+									font-family $Regular
+									color $black
+									margin-right 5px
+								&:nth-child(3)
+									font-family $Black
+									color $green
+								&:nth-child(4)
+									margin-left 3px
+									font-family $Black
+									color $green
+					&:nth-child(2)
+						flex-basis 44%
+						background linear-gradient(323.59deg, #64BB4F 6.62%, #80DC6A 81.89%)
+						border-radius 40px 40px 0 0
+						overflow hidden
+						.swiper-button-prev,
+						.swiper-button-next
+							background $white
+							width 54px
+							height 54px
+							display flex
+							align-items center
+							border 1px solid transparent
+							justify-content center
+							border-radius 50%
+							box-shadow: 0px 15px 25px rgba(156, 217, 143, 0.4);
+							transition .3s
+							&:hover
+								background-color transparent
+								border-color $white
+							& svg path
+								transition .3s
+							&:hover svg path
+								fill $white
+						.swiper-slide-prev
+							.diet__blocks-block-img
+								& img
+									position absolute
+									left 60%
+									transform rotate(-30deg) translateY(30%) scale(.9)
+									transform
+									z-index 1
+									transition .3s
+									opacity 0.5
+						.swiper-slide-active
+							.diet__blocks-block-img
+								& img
+									position relative
+									transform scale(1)
+									z-index 2
+									opacity 1
+									transition .3s
+						.swiper-slide-next
+							.diet__blocks-block-img
+								& img
+									position absolute
+									right 60%
+									transform rotate(30deg) translateY(30%) scale(.9)
+									z-index 1
+									transition .3s
+									opacity 0.5
+						.swiper-button-next,
+						.swiper-button-prev
+							top 65px
+						.swiper-button-prev
+							left 50px
+						.swiper-button-next
+							right 50px
+					&-img
+						margin-top 14%
+						height 100%
+						display flex
+						align-items center
+						justify-content center
+						& img
+							max-width 80%
+					&-bigtitle
+						position absolute
+						width 100%
+						text-align center
+						left 0
+						top 55px
+						font-size 2rem
+						line-height 32px
+						color $white
+						font-family $Black

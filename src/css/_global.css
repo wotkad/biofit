@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+a {
+  text-decoration: none;
+  color: $black;
+}
+html,
+body {
+  height: 100%;
+  background-color: $white;
+}
+textarea::-webkit-input-placeholder,
+input::-webkit-input-placeholder {
+  font-family: Arial;
+  font-weight: 100;
+}
+textarea::-moz-placeholder,
+input::-moz-placeholder {
+  font-family: Arial;
+  font-weight: 100;
+}
+textarea:-moz-placeholder,
+input:-moz-placeholder {
+  font-family: Arial;
+  font-weight: 100;
+}
+textarea:-ms-input-placeholder,
+input:-ms-input-placeholder {
+  font-family: Arial;
+  font-weight: 100;
+}
+.render {
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 99999;
+  right: 0;
+  width: 100%;
+  background-color: #fff;
+}
+.g-wrapper {
+  max-width: 1140px;
+  margin: 0 auto;
+  height: 100%;
+}
+section {
+  position: relative;
+}
+@media (max-width: 1140px) {
+  .g-wrapper {
+    padding: 0 15px;
+    width: 100%;
+  }
+}
+@media (max-width: 991px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media (max-width: 414px) {
+  input[type='text'],
+  input[type='password'],
+  input[type='email'],
+  textarea {
+    font-size: 16px;
+  }
+}

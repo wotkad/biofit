@@ -1,0 +1,17 @@
+.form
+	.form-bg
+		img(src="/images/form-bg.png")
+	.g-wrapper
+		.form__container
+			.form__container-item
+				span Попробуй сам
+				img(src="/images/wink.png")
+			form(action="#").form__container-form
+				.form__container-form-input
+					input(type="text" name="name" placeholder="Ваше имя" required="required")
+				.form__container-form-input
+					input(type="tel" name="phone" placeholder="Ваш телефон" required="required")
+				.form__container-form-button
+					button(type="submit") Позвоните мне
+.success
+	.success__text Заявка отправлена!

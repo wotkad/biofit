@@ -1,0 +1,132 @@
+.reviews
+	padding 75px 0 0
+	background-color $white
+	position relative
+	z-index 8
+	overflow hidden
+	&__container
+		padding-bottom 60px
+		border-bottom 1px solid #F0F0F0
+		&-titles
+			display flex
+			justify-content space-between
+			margin-bottom 50px
+			&-title
+				font-family $Black
+				font-size 2.625rem
+				line-height 63px
+				color $text
+				text-align left
+			&-item
+				display flex
+				align-items center
+				&-container
+					box-shadow 0px 5px 60px rgba(0, 0, 0, 0.1)
+					background-color $white
+					position relative
+					padding 20px 40px
+					display flex
+					align-items center
+					border-radius 10px 10px 10px 0
+					&:before
+						content ''
+						position absolute
+						left -15px
+						bottom 0
+						border 10px solid transparent
+						border-right 10px solid $white
+						border-bottom 10px solid $white
+					& span
+						&:nth-child(1)
+							font-family $Regular
+							color $text
+							line-height 23px
+							font-size 1.125rem
+							margin-right 3px
+						&:nth-child(2)
+							font-family $Bold
+							color $green
+							line-height 23px
+							font-size 1.125rem
+							margin-right 5px
+		&-slider
+			.swiper-container
+				overflow visible
+			&-slide
+				box-shadow 0px 10px 60px rgba(0, 0, 0, 0.08)
+				border 1px solid #f3f3f3
+				padding 20px
+				display flex
+				justify-content space-between
+				.slide__photos
+					display flex
+					flex-basis 47%
+					justify-content space-between
+					flex-wrap wrap
+					margin-bottom 20px
+					&-item
+						flex-basis 49%
+						position relative
+						border-radius 4px
+						& img
+							width 100%
+						& span
+							padding 4px
+							background linear-gradient(180deg, #FFFFFF 0%, #F2F2F2 100%)
+							font-size 0.625rem
+							line-height 10px
+							color $text
+							position absolute
+							font-family $Black
+							border-radius 2px
+							top 10px
+							left 10px
+					&-info
+						margin-top 15px
+						flex-basis 100%
+						display flex
+						justify-content space-between
+						& span
+							color $white
+							font-family $Black
+							font-size 1.125rem
+							line-height 18px
+							border-radius 3px
+							text-align center
+							padding 13px 0
+							flex-basis 30%
+							box-shadow 0px 15px 25px rgba(49, 49, 49, 0.1)
+							background linear-gradient(0.19deg, #5692CA 0.23%, #69A6DF 99.7%)
+						& a
+							color $white
+							font-family $Black
+							font-size 1.125rem
+							line-height 18px
+							border-radius 3px
+							padding 13px 0
+							text-align center
+							flex-basis 65%
+							background linear-gradient(180deg, #FDC128 0%, #FC7B32 100%)
+							transition .3s
+							&:hover
+								color $text
+								box-shadow 0px 10px 20px rgba(252, 123, 50, 0.4)
+				.slide__content
+					flex-basis 47%
+					&-title
+						font-size 1.5rem
+						line-height 24px
+						color #313131
+						font-family $Black
+						margin-bottom 5px
+					&-age
+						font-size 1rem
+						line-height 16px
+						color #313131
+						font-family $Regular
+						margin-bottom 15px
+					&-text
+						font-size 0.825rem
+						line-height 14px
+						color #717171
+						font-family $Regular

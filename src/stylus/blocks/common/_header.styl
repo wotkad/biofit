@@ -1,0 +1,87 @@
+.header
+	background-color $white
+	.header__container
+		padding 25px 0
+		border-bottom 1px solid #F0F0F0
+		display flex
+		justify-content space-between
+		align-items center
+		&-item
+			display flex
+			align-items center
+			& span
+				&:nth-child(1)
+					font-family $Light
+					font-size 1rem
+					line-height 20px
+					color $text
+					margin-right 5px
+				&:nth-child(2)
+					font-family $Bold
+					font-size 1rem
+					line-height 20px
+					color $text
+					margin-right 5px
+			.container__block
+				display flex
+				align-items center
+				&:nth-child(1)
+					& a
+						margin-left 10px
+						font-family $Black
+						font-size 1rem
+						line-height 20px
+						color $text
+						transition .3s
+						&:hover
+							color $green
+				&:nth-child(2)
+					margin-left 30px
+					& span
+						font-family $Black
+						font-size 1rem
+						line-height 20px
+						letter-spacing 0.5px
+						color $green
+						padding-bottom 3px
+						border-bottom 2px solid rgba(116, 195, 97, 0.5)
+						transition .3s
+						cursor pointer
+						&:hover
+							color $text
+	.header__container2
+		display flex
+		justify-content space-between
+		padding 9px 0
+		align-items center
+		&-logo
+			flex-basis 15%
+		&-desc
+			font-size 0.825rem
+			line-height 18px
+			font-family $Light
+			color $text
+			position relative
+			flex-basis 15%
+			&:after
+				content ''
+				position absolute
+				bottom 0px
+				background-color rgba(116, 195, 97, 0.2)
+				height 6px
+				width 120px
+				left 0
+		&-menu
+			display flex
+			.menu__item
+				margin-right 37px
+				&:last-child
+					margin-right 0
+				& a
+					font-size 1rem
+					line-height 20px
+					color $text
+					font-family $Bold
+					transition .3s
+					&:hover
+						color $green
