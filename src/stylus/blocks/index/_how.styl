@@ -7,10 +7,11 @@
 		width 100%
 		z-index 4
 		left 0
+		right 0
 	&-bg1
 		position absolute
-		top -80px
-		right 0
+		top -100px
+		right -100px
 		z-index 1
 	&-bg2
 		position absolute
@@ -69,3 +70,40 @@
 								color $text
 							& span
 								display block
+@media(max-width:1360px)
+	.how
+		&-bg1
+			right auto
+			left -100px
+		&-bg3,
+		&-bg4,
+		&-bg5
+			display none
+@media(max-width:991px)
+	.how
+		padding 50px 0
+		&-bg1
+			transform scale(.7)
+			top -140px
+			left -120px
+		&-line
+			bottom -43px
+		&__container
+			&-title
+				margin-bottom 30px
+			&-items
+				justify-content space-between
+				&-item
+					flex-basis 48%
+@media(max-width:767px)
+	.how
+		&__container
+			&-items
+				flex-wrap wrap
+				&-item
+					justify-content center
+					flex-basis 100%
+					margin-bottom 30px
+					.how__img
+						flex-basis auto
+						margin-right 25px

@@ -174,3 +174,45 @@
 .faq__container-item-toggle-item-active .faq__container-item-toggle-item-text {
   display: block;
 }
+@media (max-width: 991px) {
+  .faq {
+    padding: 40px 0;
+  }
+  .faq__container {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
+  .faq__container-item:nth-child(1) {
+    -webkit-flex-basis: 100%;
+        -ms-flex-preferred-size: 100%;
+            flex-basis: 100%;
+    overflow: hidden;
+  }
+  .faq__container-item:nth-child(1) .faq__container-item-title {
+    width: 100%;
+  }
+  .faq__container-item:nth-child(2) {
+    -webkit-flex-basis: 100%;
+        -ms-flex-preferred-size: 100%;
+            flex-basis: 100%;
+  }
+  .faq__container-item-img {
+    right: 0;
+    bottom: -200px;
+  }
+  .faq__container-item-toggle {
+    margin-bottom: 50px;
+  }
+  .faq__container-item-toggle-item span svg {
+    width: 15px;
+    margin-left: 10px;
+  }
+  .faq__container-item-title {
+    text-align: center;
+    width: 100%;
+  }
+  .faq__container-item-items {
+    overflow-x: scroll;
+  }
+}

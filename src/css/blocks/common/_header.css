@@ -1,3 +1,6 @@
+.headerMob {
+  display: none;
+}
 .header {
   background-color: $white;
 }
@@ -145,4 +148,315 @@
 }
 .header .header__container2-menu .menu__item a:hover {
   color: $green;
+}
+.mobMenu {
+  position: fixed;
+  height: 100%;
+  right: 0;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-color: $white;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  opacity: 0;
+  visibility: hidden;
+}
+.mobMenu-active {
+  z-index: 9999;
+  visibility: visible;
+  opacity: 1;
+}
+.mobMenu__block {
+  height: 60px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.mobMenu__block-phone {
+  position: absolute;
+  left: 15px;
+  top: 10px;
+}
+.mobMenu__block-phone a {
+  width: 40px;
+  height: 40px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  border: 1px solid $green;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.mobMenu__block-phone a svg path {
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.mobMenu__block-phone a:hover svg path {
+  fill: $text;
+}
+.mobMenu__block-phone a:hover {
+  border-color: $text;
+}
+.mobMenu__block-close {
+  position: absolute;
+  right: 15px;
+  cursor: pointer;
+  top: 10px;
+  width: 40px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 40px;
+}
+.mobMenu__block-close svg path {
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.mobMenu__block-close:hover svg path {
+  fill: $green;
+}
+.mobMenu__menu {
+  height: -webkit-calc(100% - 60px);
+  height: calc(100% - 60px);
+}
+.mobMenu__menu-location {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.mobMenu__menu-location span:nth-child(1) {
+  font-family: $Light;
+  font-size: 1rem;
+  line-height: 20px;
+  color: $text;
+  margin-right: 5px;
+}
+.mobMenu__menu-location span:nth-child(2) {
+  font-family: $Bold;
+  font-size: 1rem;
+  line-height: 20px;
+  color: $text;
+  margin-right: 5px;
+}
+.mobMenu__menu-items {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+.mobMenu__menu-items-item {
+  -webkit-flex-basis: 100%;
+      -ms-flex-preferred-size: 100%;
+          flex-basis: 100%;
+  padding: 17.5px 0;
+  font-size: 1.5rem;
+  line-height: 20px;
+  text-align: center;
+  color: $text;
+  font-family: $Bold;
+}
+.mobMenu__menu-button {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 32.5px;
+}
+.mobMenu__menu-button div {
+  padding: 17px 40px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: $green;
+  -webkit-border-radius: 80px;
+          border-radius: 80px;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  border: 1px solid transparent;
+}
+.mobMenu__menu-button div span {
+  font-family: $Black;
+  color: $white;
+  font-size: 1rem;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  line-height: 16px;
+}
+.mobMenu__menu-button div svg {
+  margin-right: 10px;
+}
+.mobMenu__menu-button div svg path {
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.mobMenu__menu-button div:hover svg path {
+  fill: $green;
+}
+.mobMenu__menu-button div:hover span {
+  color: $green;
+}
+.mobMenu__menu-button div:hover {
+  background-color: $white;
+  border-color: $green;
+}
+@media (max-width: 1170px) {
+  .header .header__container2-menu .menu__item {
+    margin-right: 20px;
+  }
+  .header .header__container2-menu .menu__item a {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 900px) {
+  .header {
+    display: none;
+  }
+  .headerMob {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 11;
+    height: 60px;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background-color: $white;
+  }
+  .headerMob__phone {
+    position: absolute;
+    left: 15px;
+    top: 10px;
+  }
+  .headerMob__phone a {
+    width: 40px;
+    height: 40px;
+    -webkit-border-radius: 50%;
+            border-radius: 50%;
+    border: 1px solid $green;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .headerMob__phone a svg path {
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+  }
+  .headerMob__phone a:hover svg path {
+    fill: $text;
+  }
+  .headerMob__phone a:hover {
+    border-color: $text;
+  }
+  .headerMob__menu {
+    position: absolute;
+    right: 15px;
+    cursor: pointer;
+    top: 10px;
+    width: 40px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 40px;
+  }
+  .headerMob__menu svg rect {
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+  }
+  .headerMob__menu:hover svg rect {
+    fill: $green;
+  }
 }

@@ -130,3 +130,41 @@
 						line-height 14px
 						color #717171
 						font-family $Regular
+@media(max-width:991px)
+	.reviews
+		&__container
+			padding-bottom 30px
+@media(max-width:767px)
+	.reviews
+		padding-top 40px
+		&__container
+			&-titles
+				justify-content center
+				flex-wrap wrap
+				margin-bottom 30px
+				&-item
+					flex-basis 100%
+					display flex
+					justify-content center
+					align-items center
+					&-container
+						flex-wrap wrap
+						justify-content center
+						& span
+							&:nth-child(1)
+								text-align center
+								flex-basis 100%
+				&-title
+					flex-basis 100%
+					margin-bottom 20px
+					text-align center
+@media(max-width:450px)
+	.reviews
+		&__container
+			&-slider
+				&-slide
+					flex-wrap wrap
+					.slide__photos
+						flex-basis 100%
+					.slide__content
+						flex-basis 100%

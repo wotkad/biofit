@@ -96,3 +96,31 @@
 								transform rotate(180deg)
 						.faq__container-item-toggle-item-text
 							display block
+@media(max-width:991px)
+	.faq
+		padding 40px 0
+		&__container
+			flex-wrap wrap
+			&-item
+				&:nth-child(1)
+					flex-basis 100%
+					overflow hidden
+					.faq__container-item-title
+						width 100%
+				&:nth-child(2)
+					flex-basis 100%
+				&-img
+					right 0
+					bottom -200px
+				&-toggle
+					margin-bottom 50px
+					&-item
+						& span
+							& svg
+								width 15px
+								margin-left 10px
+				&-title
+					text-align center
+					width 100%
+				&-items
+					overflow-x scroll

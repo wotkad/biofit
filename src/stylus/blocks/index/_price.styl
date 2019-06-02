@@ -177,5 +177,30 @@
 						border 10px solid transparent
 						border-right 10px solid #69A6DF
 						border-bottom 10px solid #69A6DF
-
-
+@media(max-width:991px)
+	.price
+		padding 50px 0
+@media(max-width:850px)
+	.price
+		&__container
+			&-titles
+				justify-content center
+				flex-wrap wrap
+				margin-bottom 30px
+				&-item
+					flex-basis calc(100% - 15px)
+					margin-left 15px
+					display flex
+					justify-content center
+					align-items center
+					&-container
+						flex-wrap wrap
+						justify-content center
+						& span
+							&:nth-child(1)
+								text-align center
+								flex-basis 100%
+				&-title
+					flex-basis 100%
+					margin-bottom 20px
+					text-align center
