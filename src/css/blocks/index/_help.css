@@ -7,7 +7,7 @@
 .help-block {
   position: absolute;
   left: 0;
-  top: -117px;
+  bottom: -5px;
   z-index: 7;
 }
 .help-bg:after {
@@ -139,6 +139,14 @@
 }
 .help__container-block-button:hover a {
   color: $text;
+}
+@media (max-width: 1440px) {
+  .help-line {
+    display: none;
+  }
+  .help-line2 {
+    display: none;
+  }
 }
 @media (max-width: 1360px) {
   .help-block {

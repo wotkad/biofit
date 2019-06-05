@@ -44,6 +44,7 @@ gulp.task('scripts', function(){
 		'src/vendor/scroll-lock/scroll-lock.min.js',
 		'src/vendor/tweenmax/src/minified/TweenMax.min.js',
 		'src/vendor/rellax/rellax.min.js',
+		'src/vendor/lodash/lodash.js'
 	])
 		.pipe(concat('libs.min.js'))
 		.pipe(uglify())

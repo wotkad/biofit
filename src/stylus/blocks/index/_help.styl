@@ -6,7 +6,7 @@
 	&-block
 		position absolute
 		left 0
-		top -117px
+		bottom -5px
 		z-index 7
 	&-bg
 		&:after
@@ -88,6 +88,12 @@
 					box-shadow 0px 10px 20px rgba(252, 123, 50, 0.4)
 				&:hover a
 					color $text
+@media(max-width:1440px)
+	.help
+		&-line
+			display none
+		&-line2
+			display none
 @media(max-width:1360px)
 	.help
 		&-block

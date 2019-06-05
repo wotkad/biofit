@@ -113,6 +113,11 @@
 .how__container-items-item .how__title span a span {
   display: block;
 }
+@media (max-width: 1440px) {
+  .how-line {
+    display: none;
+  }
+}
 @media (max-width: 1360px) {
   .how-bg1 {
     right: auto;

@@ -12,8 +12,8 @@
       <form class="diet__container-form" action="#">
         <div class="diet__container-form-title">Ваша цель</div>
         <div class="diet__inputs">
-          <div class="diet__input">
-            <input type="radio" name="target" id="target1" value="Похудеть"/>
+          <div class="diet__input diet__input-active">
+            <input type="radio" name="target" id="target1" value="Похудеть" checked="checked"/>
             <label for="target1">
               <div class="diet__input-bg"></div>
               <div class="diet__input-title">Похудеть</div>
@@ -42,61 +42,77 @@
         </div>
         <div class="diet__container-form-title">Выберите тип рациона</div>
         <div class="diet__types">
-          <div class="diet__type">
-            <input type="radio" name="type" id="type1" value="Снижение"/>
-            <label for="type1"><img src="/images/chart-with-downwards-trend_1f4c9.png"/><span>Снижение</span></label>
+          <div class="diet__type diet__type-active diet__type-hovered">
+            <input type="radio" name="diet" id="diet1" value="Снижение" checked="checked"/>
+            <label for="diet1"><img src="/images/chart-with-downwards-trend_1f4c9.png"/><span>Снижение</span></label>
           </div>
           <div class="diet__type">
-            <input type="radio" name="type" id="type2" value="Детокс"/>
-            <label for="type2"><img src="/images/leafy-green_1f96c.png"/><span>Детокс</span></label>
+            <input type="radio" name="diet" id="diet2" value="Баланс"/>
+            <label for="diet2"><img src="/images/person-in-lotus-position_1f9d8.png"/><span>Баланс</span></label>
+          </div>
+          <div class="diet__type diet__type-active">
+            <input type="radio" name="diet" id="diet3" value="Детокс"/>
+            <label for="diet3"><img src="/images/leafy-green_1f96c.png"/><span>Детокс</span></label>
           </div>
           <div class="diet__type">
-            <input type="radio" name="type" id="type3" value="Баланс"/>
-            <label for="type3"><img src="/images/person-in-lotus-position_1f9d8.png"/><span>Баланс</span></label>
+            <input type="radio" name="diet" id="diet4" value="Без рыбы"/>
+            <label for="diet4"><img src="/images/nofish.png"/><span>Без рыбы</span></label>
           </div>
           <div class="diet__type">
-            <input type="radio" name="type" id="type4" value="Веган"/>
-            <label for="type4"><img src="/images/broccoli_1f966.png"/><span>Веган</span></label>
+            <input type="radio" name="diet" id="diet5" value="Без мяса"/>
+            <label for="diet5"><img src="/images/nomeat.png"/><span>Без мяса</span></label>
           </div>
           <div class="diet__type">
-            <input type="radio" name="type" id="type5" value="Постное"/>
-            <label for="type5"><img src="/images/green-salad_1f957.png"/><span>Постное</span></label>
+            <input type="radio" name="diet" id="diet6" value="Без лактозы"/>
+            <label for="diet6"><img src="/images/glass-of-milk_1f95b.png"/><span>Без лактозы</span></label>
           </div>
           <div class="diet__type">
-            <input type="radio" name="type" id="type6" value="Без лактозы"/>
-            <label for="type6"><img src="/images/glass-of-milk_1f95b.png"/><span>Без лактозы</span></label>
+            <input type="radio" name="diet" id="diet7" value="Веган"/>
+            <label for="diet7"><img src="/images/broccoli_1f966.png"/><span>Веган</span></label>
           </div>
         </div>
         <div class="diet__blocks">
           <div class="diet__blocks-block">
-            <div class="diet__blocks-block-title">Выберите тип рациона</div>
+            <div class="diet__blocks-block-title">Количество калорий</div>
             <div class="diet__blocks-block__types">
-              <div class="diet__blocks-block__type">
-                <input type="radio" name="count" id="count1" value="1000 ккал"/>
+              <div class="diet__blocks-block__type diet__blocks-block__type-active diet__blocks-block__type-hovered">
+                <input type="radio" name="count" id="count1" value="1000 ккал" checked="checked"/>
                 <label for="count1"><span>1000 ккал</span></label>
               </div>
+              <div class="diet__blocks-block__type diet__blocks-block__type-active">
+                <input type="radio" name="count" id="count2" value="kk ккал"/>
+                <label for="count2"><span>1200 ккал</span></label>
+              </div>
+              <div class="diet__blocks-block__type diet__blocks-block__type-active">
+                <input type="radio" name="count" id="count3" value="1500 ккал"/>
+                <label for="count3"><span>1500 ккал</span></label>
+              </div>
               <div class="diet__blocks-block__type">
-                <input type="radio" name="count" id="count2" value="1500 ккал"/>
-                <label for="count2"><span>1500 ккал</span></label>
+                <input type="radio" name="count" id="count4" value="1800 ккал"/>
+                <label for="count4"><span>1800 ккал</span></label>
+              </div>
+              <div class="diet__blocks-block__type">
+                <input type="radio" name="count" id="count5" value="2100 ккал"/>
+                <label for="count5"><span>2100 ккал</span></label>
               </div>
             </div>
           </div>
           <div class="diet__blocks-block">
             <div class="diet__blocks-block-text">
-              <p>Программа состоит из блюд с равным соотношением белков и углеводов и оптимальным количеством жиров. Такое сочетание позволяет поддерживать текущий вес, улучшить состояние здоровья и самочувствие, нормализовать обмен веществ и наделить организм ценными витаминами и элементами.</p>
+              <p id="text">Программа подойдет для тех, кто хочет сбросить лишний вес быстро, при этом оставаться сытым. В рационе повышенное содержание белковой пищи, которая помогает нормализовать пищевое поведение, ускоряет обмен веществ и сохраняет мышечную ткань. Рацион рассчитан на 5 приемов пищи из 6-ти блюд.</p>
               <p>В программе<strong>5 приемов пищи.</strong></p>
             </div>
             <div class="diet__blocks-block-stats">
               <div class="diet__blocks-block-stats-stat">
-                <div class="diet__blocks-block-stats-stat-item"><span>123</span></div>
+                <div class="diet__blocks-block-stats-stat-item"><span id="protein">440</span></div>
                 <div class="diet__blocks-block-stats-stat-text">Белки</div>
               </div>
               <div class="diet__blocks-block-stats-stat">
-                <div class="diet__blocks-block-stats-stat-item"><span>40</span></div>
+                <div class="diet__blocks-block-stats-stat-item"><span id="fat">123</span></div>
                 <div class="diet__blocks-block-stats-stat-text">Жиры</div>
               </div>
               <div class="diet__blocks-block-stats-stat">
-                <div class="diet__blocks-block-stats-stat-item"><span>189</span></div>
+                <div class="diet__blocks-block-stats-stat-item"><span id="carbohydrates">189</span></div>
                 <div class="diet__blocks-block-stats-stat-text">Углеводы</div>
               </div>
             </div>
@@ -104,21 +120,41 @@
               <div class="diet__blocks-block-footer-button">
                 <button type="submit">Хочу рацион</button>
               </div>
-              <div class="diet__blocks-block-footer-totals"><span>5</span><span>блюд от</span><span>708</span><span>руб./день</span></div>
+              <div class="diet__blocks-block-footer-totals"><span>6</span><span>блюд от</span><span id="price">237</span><span>руб./день</span></div>
             </div>
           </div>
           <div class="diet__blocks-block">
-            <div class="diet__blocks-block-bigtitle">Обед</div>
             <div class="swiper-container swiper-container-diet">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
+                  <div class="diet__blocks-block-bigtitle">Завтрак</div>
+                  <div class="diet__blocks-block-desc">Рисовая каша с финиками</div>
                   <div class="diet__blocks-block-img"><img src="/images/product.png"/></div>
                 </div>
                 <div class="swiper-slide">
+                  <div class="diet__blocks-block-bigtitle">Второй завтрак</div>
+                  <div class="diet__blocks-block-desc">Гречка с йогуртом</div>
                   <div class="diet__blocks-block-img"><img src="/images/product2.png"/></div>
                 </div>
                 <div class="swiper-slide">
+                  <div class="diet__blocks-block-bigtitle">Обед (первое блюдо)</div>
+                  <div class="diet__blocks-block-desc">С-т из марин. свеклы с горошком</div>
                   <div class="diet__blocks-block-img"><img src="/images/product3.png"/></div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="diet__blocks-block-bigtitle">Обед (второе блюдо)</div>
+                  <div class="diet__blocks-block-desc">Плов из индейки с киноа</div>
+                  <div class="diet__blocks-block-img"><img src="/images/product2.png"/></div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="diet__blocks-block-bigtitle">Полдник</div>
+                  <div class="diet__blocks-block-desc">Творог с личи</div>
+                  <div class="diet__blocks-block-img"><img src="/images/product.png"/></div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="diet__blocks-block-bigtitle">Ужин</div>
+                  <div class="diet__blocks-block-desc">Лемонема с кабачково икрой</div>
+                  <div class="diet__blocks-block-img"><img src="/images/product2.png"/></div>
                 </div>
               </div>
               <div class="swiper-button-prev"><svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.217797 10.9193L7.64081 19.496C7.93 19.8301 8.40039 19.8301 8.69078 19.496C8.97998 19.1604 8.97998 18.617 8.69078 18.2828L2.52774 11.1633L23.2572 11.1633C23.6676 11.1633 24 10.7792 24 10.305C24 9.83087 23.6676 9.44682 23.2572 9.44682L2.54214 9.44682L8.69078 2.34253C8.97998 2.00839 8.97998 1.4649 8.69078 1.12937C8.54439 0.962992 8.35479 0.878418 8.1652 0.878418C7.9756 0.878418 7.78481 0.962992 7.64081 1.12937L0.217797 9.70609C-0.0725949 10.0416 -0.0725949 10.5837 0.217797 10.9193Z" fill="#74C361"/></svg></div>
