@@ -219,6 +219,7 @@
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
+  padding: 7px;
 }
 .diet__container-form label:hover {
   border-color: $white;
@@ -238,6 +239,7 @@
   background-color: $white;
   -webkit-border-radius: 80px;
           border-radius: 80px;
+  border: 3px solid transparent;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
@@ -294,8 +296,7 @@
   color: $white;
 }
 .diet__container-form .diet__type-hovered {
-  -webkit-box-shadow: 0px 15px 25px #74d75f;
-          box-shadow: 0px 15px 25px #74d75f;
+  border-color: $white;
 }
 .diet__container-form .diet__blocks {
   -webkit-flex-basis: 100%;
@@ -335,6 +336,9 @@
 }
 .diet__container-form .diet__blocks-block:nth-child(3) .swiper-container {
   height: 100%;
+}
+.diet__container-form .diet__blocks-block:nth-child(3) .swiper-slide {
+  min-height: 557px;
 }
 .diet__container-form .diet__blocks-block__types {
   display: -webkit-box;
@@ -537,7 +541,7 @@
       -ms-flex-preferred-size: 45%;
           flex-basis: 45%;
 }
-.diet__container-form .diet__blocks-block-footer-button button {
+.diet__container-form .diet__blocks-block-footer-button a {
   font-family: $Black;
   color: $white;
   cursor: pointer;
@@ -553,8 +557,10 @@
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
+  display: block;
+  text-align: center;
 }
-.diet__container-form .diet__blocks-block-footer-button button:hover {
+.diet__container-form .diet__blocks-block-footer-button a:hover {
   color: $green;
   background: $white;
   border-color: $green;
@@ -733,7 +739,7 @@
   left: 0;
   top: 70px;
   font-size: 1rem;
-  line-height: 32px;
+  line-height: 22px;
   color: $white;
   font-family: $Black;
 }

@@ -6,7 +6,7 @@ html
 		meta(http-equiv="X-UA-Compatible", content="ie=edge")
 		title BioFit | Main
 		link(rel="stylesheet", href="/css/libs.min.css")
-		link(rel="stylesheet", href="/css/style.css")
+		link(rel="stylesheet", href="/css/style.min.css")
 		link(rel="shortcut icon" type="image/png" href="/images/favicon.png")
 		script(src="https://cdn.polyfill.io/v2/polyfill.min.js")
 	body
@@ -16,10 +16,11 @@ html
 		include ./blocks/index/how.pug
 		include ./blocks/index/diet.pug
 		include ./blocks/index/price.pug
-		include ./blocks/index/help.pug
+		//- include ./blocks/index/help.pug
 		include ./blocks/index/reviews.pug
 		include ./blocks/index/faq.pug
 		include ./blocks/index/form.pug
+		include ./blocks/common/buy.pug
 		include ./blocks/common/footer.pug
 		script(src="/js/libs.min.js")
-		script(src="/js/main.js")
+		script(src="/js/main.min.js")

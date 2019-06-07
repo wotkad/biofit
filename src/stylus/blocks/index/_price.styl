@@ -59,14 +59,13 @@
 							&:before
 								border-right 10px solid $green
 								border-bottom 10px solid $green
-
-				&:last-child
-					.price__container-slider-slide
-						.price-content
-							&-sale
-								& span
-									&:nth-child(1)
-										background linear-gradient(0.11deg, #74C361 0.23%, #84D96F 99.7%)
+				// &:last-child
+				// 	.price__container-slider-slide
+				// 		.price-content
+				// 			&-sale
+				// 				& span
+				// 					&:nth-child(1)
+				// 						background linear-gradient(0.11deg, #74C361 0.23%, #84D96F 99.7%)
 			&-slide
 				display flex
 				flex-wrap wrap
@@ -100,16 +99,21 @@
 						font-family $Bold
 						line-height 24px
 						font-size 1.5rem
+						& span
+							margin-left 4px
 					&-total
 						color #313131
 						font-family $Black
 						line-height 24px
 						font-size 1.5rem
+						.sale
+							margin-right 4px
 					&-button
 						background linear-gradient(180deg, #FDC128 0%, #FC7B32 100%)
 						border-radius 8px
 						transition .3s
 						display none
+						cursor pointer
 						align-items center
 						justify-content center
 						padding 14px
@@ -126,13 +130,14 @@
 					&-sale
 						position absolute
 						right 30px
-						top 25px
+						top 65px
 						display flex
 						justify-content flex-end
 						flex-direction column
 						& span
 							&:nth-child(1)
-								background linear-gradient(0.11deg, #5692CA 0.23%, #69A6DF 99.7%)
+								background $green
+								box-shadow 0px 15px 25px rgba(156,217,143,0.4)
 								border-radius 5px
 								display flex
 								align-items center
@@ -141,7 +146,33 @@
 								color $white
 								padding 5px 10px
 								font-size 0.825rem
-								margin-bottom 8px
+								margin-bottom 4px
+								& div
+									display inline-block
+									margin-left 2px
+							&:nth-child(2)
+								text-align right
+								color $text
+								text-transform lowercase
+								font-family $Black
+								font-size 0.625rem
+								line-height 10px
+					&-saletext
+						position absolute
+						right 30px
+						top 25px
+						display flex
+						justify-content flex-end
+						flex-direction column
+						& span
+							&:nth-child(1)
+								display flex
+								align-items center
+								justify-content center
+								font-family $Black
+								color #66A3DB
+								line-height 22px
+								font-size 1.5rem
 							&:nth-child(2)
 								text-align right
 								color $text
