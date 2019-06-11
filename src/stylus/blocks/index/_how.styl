@@ -24,11 +24,15 @@
 	&-bg4
 		position absolute
 		bottom 0%
-		left 50px
+		left 30px
 	&-bg5
 		position absolute
 		bottom 30%
-		left 50px
+		left 30px
+	&-bg6
+		position absolute
+		top 27%
+		right 5%
 	&__container
 		z-index 2
 		position relative
@@ -44,21 +48,19 @@
 			justify-content center
 			flex-wrap wrap
 			&-item
-				flex-basis 35%
+				flex-basis 33.33334%
 				display flex
 				align-items center
-				justify-content space-between
-				&:nth-child(1),
-				&:nth-child(2)
-					margin-bottom 20px
-				.how__img
-					flex-basis 30%
+				justify-content center
+				flex-wrap wrap
 				.how__title
-					flex-basis 60%
+					margin-bottom 10px
+					flex-basis 100%
+					text-align center
 					& span
 						font-family $Regular
-						font-size 1.125rem
-						color $text
+						font-size 1rem
+						color #535353
 						line-height 23px
 						& a
 							margin-left 3px
@@ -68,8 +70,96 @@
 							transition .3s
 							&:hover
 								color $text
-							& span
-								display block
+				.how__text
+					font-family $Regular
+					font-size 1rem
+					flex-basis 70%
+					color #757575
+					text-align center
+					line-height 23px
+.rotating
+	animation rotating 8s linear infinite
+	width 166px
+	height 166px
+@keyframes rotating
+	from
+		transform rotate(0deg)
+	to
+		transform rotate(360deg)
+.slideUp
+	animation slideUp 1.5s linear infinite
+@keyframes slideUp
+	0%
+		transform translateY(0px)
+		opacity 1
+	50%
+		transform translateY(9px)
+		opacity 0
+	100%
+		transform translateY(0px)
+		opacity 1
+.slideUpReverse
+	animation slideUpReverse 1.5s linear infinite
+@keyframes slideUpReverse
+	0%
+		transform translateY(-6px)
+		opacity 0
+	50%
+		transform translateY(0px)
+		opacity 1
+	100%
+		transform translateY(-6px)
+		opacity 0
+.slideUp
+	animation slideUp 1.5s linear infinite
+@keyframes slideUp
+	0%
+		transform translateY(0px)
+		opacity 1
+	50%
+		transform translateY(-6px)
+		opacity 0
+	100%
+		transform translateY(0px)
+		opacity 1
+.slideUpLeft
+	animation slideUpLeft 1.5s linear infinite
+@keyframes slideUpLeft
+	0%
+		transform translateY(0px) translateX(0px)
+		opacity 1
+	50%
+		transform translateY(-3px) translateX(-3px)
+		opacity 0
+	100%
+		transform translateY(0px) translateX(0px)
+		opacity 1
+.slideUpRight
+	animation slideUpRight 1.5s linear infinite
+@keyframes slideUpRight
+	0%
+		transform translateY(0px) translateX(0px)
+		opacity 1
+	50%
+		transform translateY(-3px) translateX(3px)
+		opacity 0
+	100%
+		transform translateY(0px) translateX(0px)
+		opacity 1
+.route
+	animation route 1s linear infinite
+@keyframes route
+	0%
+		transform translateX(0px)
+		opacity 0
+	100%
+		transform translateX(-20px)
+		opacity 1
+
+@media(max-width:1440px)
+	.how
+		&-line
+			display none
 @media(max-width:1440px)
 	.how
 		&-line
@@ -83,6 +173,11 @@
 		&-bg4,
 		&-bg5
 			display none
+		&-bg6
+			position absolute
+			top auto
+			bottom -50px
+			left -30px
 @media(max-width:991px)
 	.how
 		padding 50px 0
@@ -90,6 +185,9 @@
 			transform scale(.7)
 			top -140px
 			left -120px
+		&-bg2
+			bottom -150px
+			right -80px
 		&-line
 			bottom -43px
 		&__container
@@ -99,6 +197,9 @@
 				justify-content space-between
 				&-item
 					flex-basis 48%
+					&:nth-child(1),
+					&:nth-child(2)
+						margin-bottom 20px
 @media(max-width:767px)
 	.how
 		&__container

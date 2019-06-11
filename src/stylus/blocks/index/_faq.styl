@@ -17,10 +17,23 @@
 					font-family $Regular
 					color $text
 					margin-bottom 10px
+				& a
+					font-size 1rem
+					line-height 24px
+					font-family $Regular
+					color $green
+					margin-bottom 10px
+					transition .3s
+					border-bottom 1px solid $green
+					margin-left 3px
+					&:hover
+						color $text
+						border-color $text
 			&-img
 				z-index 1
 				position absolute
-				bottom -120px
+				bottom -160px
+				right 0
 			&:nth-child(1)
 				flex-basis 65%
 				.faq__container-item-title

@@ -63,11 +63,12 @@
 					flex-basis 47%
 					justify-content space-between
 					flex-wrap wrap
-					margin-bottom 20px
 					&-item
 						flex-basis 49%
 						position relative
 						border-radius 4px
+						height 202px
+						overflow hidden
 						& img
 							width 100%
 						& span
@@ -138,6 +139,10 @@
 	.reviews
 		padding-top 40px
 		&__container
+			&-slider
+				&-slide
+					.slide__photos
+						margin-bottom 20px
 			&-titles
 				justify-content center
 				flex-wrap wrap

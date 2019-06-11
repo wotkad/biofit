@@ -107,12 +107,13 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
 }
 .diet__container-form .diet__input {
   margin-bottom: 40px;
-  height: 113.2px;
+  height: 180px;
   position: relative;
-  width: 219.4px;
+  width: 33.33334%;
   margin-right: 20px;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
@@ -120,6 +121,9 @@
   cursor: pointer;
   -webkit-box-shadow: 0px 20px 30px rgba(0,0,0,0.1);
           box-shadow: 0px 20px 30px rgba(0,0,0,0.1);
+}
+.diet__container-form .diet__input label {
+  padding: 27px;
 }
 .diet__container-form .diet__input-active.diet__input label {
   border-color: $white;
@@ -161,20 +165,19 @@
 .diet__container-form .diet__input-text {
   z-index: 1;
   position: relative;
-  font-size: 0.75rem;
+  font-size: 1.125rem;
   color: $white;
-  line-height: 12px;
+  line-height: 22px;
   font-family: $Light;
-  -webkit-flex-basis: 60%;
-      -ms-flex-preferred-size: 60%;
-          flex-basis: 60%;
-  margin-top: 18px;
+  -webkit-flex-basis: 75%;
+      -ms-flex-preferred-size: 75%;
+          flex-basis: 75%;
 }
 .diet__container-form .diet__input-title {
   z-index: 1;
   position: relative;
-  font-size: 1.0625rem;
-  line-height: 17px;
+  font-size: 1.875rem;
+  line-height: 36px;
   color: $white;
   text-transform: uppercase;
   -webkit-flex-basis: 100%;
@@ -339,6 +342,10 @@
 }
 .diet__container-form .diet__blocks-block:nth-child(3) .swiper-slide {
   min-height: 557px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 .diet__container-form .diet__blocks-block__types {
   display: -webkit-box;
@@ -703,7 +710,6 @@
   right: 20px;
 }
 .diet__container-form .diet__blocks-block-img {
-  margin-top: 14%;
   height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -717,6 +723,10 @@
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
+  width: 100%;
+  -webkit-align-self: flex-end;
+      -ms-flex-item-align: end;
+          align-self: flex-end;
 }
 .diet__container-form .diet__blocks-block-img img {
   max-width: 80%;
@@ -752,11 +762,20 @@
   }
 }
 @media (max-width: 1170px) {
+  .diet__container-form .diet__input {
+    min-width: 350px;
+  }
   .diet__container-form .diet__types {
     overflow-x: scroll;
   }
   .diet__container-form .diet__blocks-block-text {
     min-height: auto;
+  }
+  .diet__container-form .diet__blocks-block-bigtitle {
+    top: 80px;
+  }
+  .diet__container-form .diet__blocks-block-desc {
+    top: 120px;
   }
   .diet__container-form .diet__blocks-block:nth-child(1) {
     grid-column: 1/6;
@@ -836,9 +855,6 @@
     display: flex;
     overflow-x: scroll;
   }
-  .diet__container-form .diet__inputs .diet__input {
-    min-width: 200px;
-  }
 }
 @media (max-width: 767px) {
   .diet__container-form .diet__blocks-block-stats {
@@ -898,9 +914,6 @@
   }
 }
 @media (max-width: 500px) {
-  .diet__container-form .diet__blocks-block-bigtitle {
-    top: 30px;
-  }
   .diet__container-form .diet__blocks-block:nth-child(3) .swiper-button-next,
   .diet__container-form .diet__blocks-block:nth-child(3) .swiper-button-prev {
     top: 40px;
@@ -928,5 +941,8 @@
   .diet__container-form .diet__blocks-block__type {
     width: 112px;
     height: 34px;
+  }
+  .diet__container-form .diet__input {
+    min-width: 300px;
   }
 }

@@ -28,10 +28,27 @@
   color: $text;
   margin-bottom: 10px;
 }
+.faq__container-item-text a {
+  font-size: 1rem;
+  line-height: 24px;
+  font-family: $Regular;
+  color: $green;
+  margin-bottom: 10px;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  border-bottom: 1px solid $green;
+  margin-left: 3px;
+}
+.faq__container-item-text a:hover {
+  color: $text;
+  border-color: $text;
+}
 .faq__container-item-img {
   z-index: 1;
   position: absolute;
-  bottom: -120px;
+  bottom: -160px;
+  right: 0;
 }
 .faq__container-item:nth-child(1) {
   -webkit-flex-basis: 65%;
