@@ -59,19 +59,32 @@
 							&:before
 								border-right 10px solid #69A6DF
 								border-bottom 10px solid #69A6DF
+						.price-content
+							&-subtitle
+								&:nth-child(4)
+									display none
+							&-saleprice
+								&:nth-child(5)
+									display none
+				&:nth-child(2)
+					.price__container-slider-slide
+						.price-content
+							&-price
+								&:after
+									display none
+						.price-content
+							&-subtitle
+								&:nth-child(4)
+									display none
+							&-saleprice
+								&:nth-child(5)
+									display none
 				&:nth-child(4)
 					.price__container-slider-slide
 						.price-footer
 							&:before
 								border-right 10px solid $green
 								border-bottom 10px solid $green
-				// &:last-child
-				// 	.price__container-slider-slide
-				// 		.price-content
-				// 			&-sale
-				// 				& span
-				// 					&:nth-child(1)
-				// 						background linear-gradient(0.11deg, #74C361 0.23%, #84D96F 99.7%)
 			&-slide
 				display flex
 				flex-wrap wrap
@@ -100,20 +113,40 @@
 						line-height 14px
 						font-size 0.825rem
 					&-price
-						color $text
+						color #7a7a7a
 						margin-bottom 20px
 						font-family $Bold
 						line-height 24px
+						display inline-block
+						position relative
 						font-size 1.5rem
 						& span
-							margin-left 4px
+							margin-left 5px
+						&:after
+							content ''
+							position absolute
+							left 0
+							height 3px
+							width 100%
+							right 0
+							top calc(50% - 1.5px)
+							background-color #c94646
+							transform rotate(5deg)
+					&-saleprice
+						color $green
+						font-family $Black
+						line-height 24px
+						font-size 1.5rem
+						margin-bottom 20px
+						.salePriceOne
+							margin-right 5px
 					&-total
-						color #313131
+						color #69A6DF
 						font-family $Black
 						line-height 24px
 						font-size 1.5rem
 						.sale
-							margin-right 4px
+							margin-right 5px
 					&-button
 						background linear-gradient(180deg, #FDC128 0%, #FC7B32 100%)
 						border-radius 8px

@@ -1222,10 +1222,35 @@ $(document).ready(() => {
 		let ratePrice = $('.price-content-price');
 		let rateTotal = $('.price-content-total');
 		let sale = $('.salePrice');
+		let salePriceOne = $('.salePriceOne');
 		$(kcal[0]).on('click', (e) => {
 			if (input.prop('checked') == true) {
 				e.preventDefault();
 				$.getJSON('js/kcals.json', function(data) {
+
+					$(salePriceOne[0]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'decline' && e.kcal == 1000;
+						})[0].price * SMALLSALE)
+					);
+
+					$(salePriceOne[1]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'decline' && e.kcal == 1000;
+						})[0].price)
+					);
+
+					$(salePriceOne[2]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'decline' && e.kcal == 1000;
+						})[0].price * SMALLSALE)
+					);
+
+					$(salePriceOne[3]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'decline' && e.kcal == 1000;
+						})[0].price * SMALLSALE)
+					);
 
 					$(sale[0]).text(
 						(_.filter(data.kcals, function(e) {
@@ -1368,6 +1393,30 @@ $(document).ready(() => {
 				e.preventDefault();
 				$.getJSON('js/kcals.json', function(data) {
 
+					$(salePriceOne[0]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'decline' && e.kcal == 1200;
+						})[0].price * SMALLSALE)
+					);
+
+					$(salePriceOne[1]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'decline' && e.kcal == 1200;
+						})[0].price)
+					);
+
+					$(salePriceOne[2]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'decline' && e.kcal == 1200;
+						})[0].price * SMALLSALE)
+					);
+
+					$(salePriceOne[3]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'decline' && e.kcal == 1200;
+						})[0].price * SMALLSALE)
+					);
+
 					$(sale[0]).text(
 						(_.filter(data.kcals, function(e) {
 							return e.diet == 'decline' && e.kcal == 1200;
@@ -1508,6 +1557,30 @@ $(document).ready(() => {
 			if (input.prop('checked') == true) {
 				e.preventDefault();
 				$.getJSON('js/kcals.json', function(data) {
+
+					$(salePriceOne[0]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'decline' && e.kcal == 1500;
+						})[0].price * SMALLSALE)
+					);
+
+					$(salePriceOne[1]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'decline' && e.kcal == 1500;
+						})[0].price)
+					);
+
+					$(salePriceOne[2]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'decline' && e.kcal == 1500;
+						})[0].price * SMALLSALE)
+					);
+
+					$(salePriceOne[3]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'decline' && e.kcal == 1500;
+						})[0].price * SMALLSALE)
+					);
 
 					$(sale[0]).text(
 						(_.filter(data.kcals, function(e) {
@@ -1661,10 +1734,35 @@ $(document).ready(() => {
 		let ratePrice = $('.price-content-price');
 		let rateTotal = $('.price-content-total');
 		let sale = $('.salePrice');
+		let salePriceOne = $('.salePriceOne');
 		$(kcal[3]).on('click', (e) => {
 			if (input.prop('checked') == true) {
 				e.preventDefault();
 				$.getJSON('js/kcals.json', function(data) {
+
+					$(salePriceOne[0]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'balance' && e.kcal == 1800;
+						})[0].price * SMALLSALE)
+					);
+
+					$(salePriceOne[1]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'balance' && e.kcal == 1800;
+						})[0].price)
+					);
+
+					$(salePriceOne[2]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'balance' && e.kcal == 1800;
+						})[0].price * SMALLSALE)
+					);
+
+					$(salePriceOne[3]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'balance' && e.kcal == 1800;
+						})[0].price * SMALLSALE)
+					);
 
 					$(sale[0]).text(
 						(_.filter(data.kcals, function(e) {
@@ -1806,6 +1904,30 @@ $(document).ready(() => {
 			if (input.prop('checked') == true) {
 				e.preventDefault();
 				$.getJSON('js/kcals.json', function(data) {
+
+					$(salePriceOne[0]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'balance' && e.kcal == 2100;
+						})[0].price * SMALLSALE)
+					);
+
+					$(salePriceOne[1]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'balance' && e.kcal == 2100;
+						})[0].price)
+					);
+
+					$(salePriceOne[2]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'balance' && e.kcal == 2100;
+						})[0].price * SMALLSALE)
+					);
+
+					$(salePriceOne[3]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'balance' && e.kcal == 2100;
+						})[0].price * SMALLSALE)
+					);
 
 					$(sale[0]).text(
 						(_.filter(data.kcals, function(e) {
@@ -1959,10 +2081,35 @@ $(document).ready(() => {
 		let ratePrice = $('.price-content-price');
 		let rateTotal = $('.price-content-total');
 		let sale = $('.salePrice');
+		let salePriceOne = $('.salePriceOne');
 		$(kcal[1]).on('click', (e) => {
 			if (input.prop('checked') == true) {
 				e.preventDefault();
 				$.getJSON('js/kcals.json', function(data) {
+
+					$(salePriceOne[0]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'detox' && e.kcal == 1200;
+						})[0].price * SMALLSALE)
+					);
+
+					$(salePriceOne[1]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'detox' && e.kcal == 1200;
+						})[0].price)
+					);
+
+					$(salePriceOne[2]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'detox' && e.kcal == 1200;
+						})[0].price * SMALLSALE)
+					);
+
+					$(salePriceOne[3]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'detox' && e.kcal == 1200;
+						})[0].price * SMALLSALE)
+					);
 
 					$(sale[0]).text(
 						(_.filter(data.kcals, function(e) {
@@ -2116,10 +2263,35 @@ $(document).ready(() => {
 		let ratePrice = $('.price-content-price');
 		let rateTotal = $('.price-content-total');
 		let sale = $('.salePrice');
+		let salePriceOne = $('.salePriceOne');
 		$(kcal[0]).on('click', (e) => {
 			if (input.prop('checked') == true) {
 				e.preventDefault();
 				$.getJSON('js/kcals.json', function(data) {
+
+					$(salePriceOne[0]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'nofish' && e.kcal == 1000;
+						})[0].price * SMALLSALE)
+					);
+
+					$(salePriceOne[1]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'nofish' && e.kcal == 1000;
+						})[0].price)
+					);
+
+					$(salePriceOne[2]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'nofish' && e.kcal == 1000;
+						})[0].price * SMALLSALE)
+					);
+
+					$(salePriceOne[3]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'nofish' && e.kcal == 1000;
+						})[0].price * SMALLSALE)
+					);
 
 					$(sale[0]).text(
 						(_.filter(data.kcals, function(e) {
@@ -2262,6 +2434,30 @@ $(document).ready(() => {
 				e.preventDefault();
 				$.getJSON('js/kcals.json', function(data) {
 
+					$(salePriceOne[0]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'nofish' && e.kcal == 1200;
+						})[0].price * SMALLSALE)
+					);
+
+					$(salePriceOne[1]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'nofish' && e.kcal == 1200;
+						})[0].price)
+					);
+
+					$(salePriceOne[2]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'nofish' && e.kcal == 1200;
+						})[0].price * SMALLSALE)
+					);
+
+					$(salePriceOne[3]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'nofish' && e.kcal == 1200;
+						})[0].price * SMALLSALE)
+					);
+
 					$(sale[0]).text(
 						(_.filter(data.kcals, function(e) {
 							return e.diet == 'nofish' && e.kcal == 1200;
@@ -2402,6 +2598,30 @@ $(document).ready(() => {
 			if (input.prop('checked') == true) {
 				e.preventDefault();
 				$.getJSON('js/kcals.json', function(data) {
+
+					$(salePriceOne[0]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'nofish' && e.kcal == 1500;
+						})[0].price * SMALLSALE)
+					);
+
+					$(salePriceOne[1]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'nofish' && e.kcal == 1500;
+						})[0].price)
+					);
+
+					$(salePriceOne[2]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'nofish' && e.kcal == 1500;
+						})[0].price * SMALLSALE)
+					);
+
+					$(salePriceOne[3]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'nofish' && e.kcal == 1500;
+						})[0].price * SMALLSALE)
+					);
 
 					$(sale[0]).text(
 						(_.filter(data.kcals, function(e) {
@@ -2544,6 +2764,30 @@ $(document).ready(() => {
 				e.preventDefault();
 				$.getJSON('js/kcals.json', function(data) {
 
+					$(salePriceOne[0]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'nofish' && e.kcal == 1800;
+						})[0].price * SMALLSALE)
+					);
+
+					$(salePriceOne[1]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'nofish' && e.kcal == 1800;
+						})[0].price)
+					);
+
+					$(salePriceOne[2]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'nofish' && e.kcal == 1800;
+						})[0].price * SMALLSALE)
+					);
+
+					$(salePriceOne[3]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'nofish' && e.kcal == 1800;
+						})[0].price * SMALLSALE)
+					);
+
 					$(sale[0]).text(
 						(_.filter(data.kcals, function(e) {
 							return e.diet == 'nofish' && e.kcal == 1800;
@@ -2684,6 +2928,30 @@ $(document).ready(() => {
 			if (input.prop('checked') == true) {
 				e.preventDefault();
 				$.getJSON('js/kcals.json', function(data) {
+
+					$(salePriceOne[0]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'nofish' && e.kcal == 2100;
+						})[0].price * SMALLSALE)
+					);
+
+					$(salePriceOne[1]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'nofish' && e.kcal == 2100;
+						})[0].price)
+					);
+
+					$(salePriceOne[2]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'nofish' && e.kcal == 2100;
+						})[0].price * SMALLSALE)
+					);
+
+					$(salePriceOne[3]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'nofish' && e.kcal == 2100;
+						})[0].price * SMALLSALE)
+					);
 
 					$(sale[0]).text(
 						(_.filter(data.kcals, function(e) {
@@ -2837,10 +3105,35 @@ $(document).ready(() => {
 		let ratePrice = $('.price-content-price');
 		let rateTotal = $('.price-content-total');
 		let sale = $('.salePrice');
+		let salePriceOne = $('.salePriceOne');
 		$(kcal[0]).on('click', (e) => {
 			if (input.prop('checked') == true) {
 				e.preventDefault();
 				$.getJSON('js/kcals.json', function(data) {
+
+					$(salePriceOne[0]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'nomeat' && e.kcal == 1000;
+						})[0].price * SMALLSALE)
+					);
+
+					$(salePriceOne[1]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'nomeat' && e.kcal == 1000;
+						})[0].price)
+					);
+
+					$(salePriceOne[2]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'nomeat' && e.kcal == 1000;
+						})[0].price * SMALLSALE)
+					);
+
+					$(salePriceOne[3]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'nomeat' && e.kcal == 1000;
+						})[0].price * SMALLSALE)
+					);
 
 					$(sale[0]).text(
 						(_.filter(data.kcals, function(e) {
@@ -2983,6 +3276,30 @@ $(document).ready(() => {
 				e.preventDefault();
 				$.getJSON('js/kcals.json', function(data) {
 
+					$(salePriceOne[0]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'nomeat' && e.kcal == 1200;
+						})[0].price * SMALLSALE)
+					);
+
+					$(salePriceOne[1]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'nomeat' && e.kcal == 1200;
+						})[0].price)
+					);
+
+					$(salePriceOne[2]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'nomeat' && e.kcal == 1200;
+						})[0].price * SMALLSALE)
+					);
+
+					$(salePriceOne[3]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'nomeat' && e.kcal == 1200;
+						})[0].price * SMALLSALE)
+					);
+
 					$(sale[0]).text(
 						(_.filter(data.kcals, function(e) {
 							return e.diet == 'nomeat' && e.kcal == 1200;
@@ -3123,6 +3440,30 @@ $(document).ready(() => {
 			if (input.prop('checked') == true) {
 				e.preventDefault();
 				$.getJSON('js/kcals.json', function(data) {
+
+					$(salePriceOne[0]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'nomeat' && e.kcal == 1500;
+						})[0].price * SMALLSALE)
+					);
+
+					$(salePriceOne[1]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'nomeat' && e.kcal == 1500;
+						})[0].price)
+					);
+
+					$(salePriceOne[2]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'nomeat' && e.kcal == 1500;
+						})[0].price * SMALLSALE)
+					);
+
+					$(salePriceOne[3]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'nomeat' && e.kcal == 1500;
+						})[0].price * SMALLSALE)
+					);
 
 					$(sale[0]).text(
 						(_.filter(data.kcals, function(e) {
@@ -3265,6 +3606,30 @@ $(document).ready(() => {
 				e.preventDefault();
 				$.getJSON('js/kcals.json', function(data) {
 
+					$(salePriceOne[0]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'nomeat' && e.kcal == 1800;
+						})[0].price * SMALLSALE)
+					);
+
+					$(salePriceOne[1]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'nomeat' && e.kcal == 1800;
+						})[0].price)
+					);
+
+					$(salePriceOne[2]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'nomeat' && e.kcal == 1800;
+						})[0].price * SMALLSALE)
+					);
+
+					$(salePriceOne[3]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'nomeat' && e.kcal == 1800;
+						})[0].price * SMALLSALE)
+					);
+
 					$(sale[0]).text(
 						(_.filter(data.kcals, function(e) {
 							return e.diet == 'nomeat' && e.kcal == 1800;
@@ -3405,6 +3770,30 @@ $(document).ready(() => {
 			if (input.prop('checked') == true) {
 				e.preventDefault();
 				$.getJSON('js/kcals.json', function(data) {
+
+					$(salePriceOne[0]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'nomeat' && e.kcal == 2100;
+						})[0].price * SMALLSALE)
+					);
+
+					$(salePriceOne[1]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'nomeat' && e.kcal == 2100;
+						})[0].price)
+					);
+
+					$(salePriceOne[2]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'nomeat' && e.kcal == 2100;
+						})[0].price * SMALLSALE)
+					);
+
+					$(salePriceOne[3]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'nomeat' && e.kcal == 2100;
+						})[0].price * SMALLSALE)
+					);
 
 					$(sale[0]).text(
 						(_.filter(data.kcals, function(e) {
@@ -3558,10 +3947,35 @@ $(document).ready(() => {
 		let ratePrice = $('.price-content-price');
 		let rateTotal = $('.price-content-total');
 		let sale = $('.salePrice');
+		let salePriceOne = $('.salePriceOne');
 		$(kcal[0]).on('click', (e) => {
 			if (input.prop('checked') == true) {
 				e.preventDefault();
 				$.getJSON('js/kcals.json', function(data) {
+
+					$(salePriceOne[0]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'nomilk' && e.kcal == 1000;
+						})[0].price * SMALLSALE)
+					);
+
+					$(salePriceOne[1]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'nomilk' && e.kcal == 1000;
+						})[0].price)
+					);
+
+					$(salePriceOne[2]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'nomilk' && e.kcal == 1000;
+						})[0].price * SMALLSALE)
+					);
+
+					$(salePriceOne[3]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'nomilk' && e.kcal == 1000;
+						})[0].price * SMALLSALE)
+					);
 
 					$(sale[0]).text(
 						(_.filter(data.kcals, function(e) {
@@ -3704,6 +4118,30 @@ $(document).ready(() => {
 				e.preventDefault();
 				$.getJSON('js/kcals.json', function(data) {
 
+					$(salePriceOne[0]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'nomilk' && e.kcal == 1200;
+						})[0].price * SMALLSALE)
+					);
+
+					$(salePriceOne[1]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'nomilk' && e.kcal == 1200;
+						})[0].price)
+					);
+
+					$(salePriceOne[2]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'nomilk' && e.kcal == 1200;
+						})[0].price * SMALLSALE)
+					);
+
+					$(salePriceOne[3]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'nomilk' && e.kcal == 1200;
+						})[0].price * SMALLSALE)
+					);
+
 					$(sale[0]).text(
 						(_.filter(data.kcals, function(e) {
 							return e.diet == 'nomilk' && e.kcal == 1200;
@@ -3844,6 +4282,30 @@ $(document).ready(() => {
 			if (input.prop('checked') == true) {
 				e.preventDefault();
 				$.getJSON('js/kcals.json', function(data) {
+
+					$(salePriceOne[0]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'nomilk' && e.kcal == 1500;
+						})[0].price * SMALLSALE)
+					);
+
+					$(salePriceOne[1]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'nomilk' && e.kcal == 1500;
+						})[0].price)
+					);
+
+					$(salePriceOne[2]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'nomilk' && e.kcal == 1500;
+						})[0].price * SMALLSALE)
+					);
+
+					$(salePriceOne[3]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'nomilk' && e.kcal == 1500;
+						})[0].price * SMALLSALE)
+					);
 
 					$(sale[0]).text(
 						(_.filter(data.kcals, function(e) {
@@ -3986,6 +4448,30 @@ $(document).ready(() => {
 				e.preventDefault();
 				$.getJSON('js/kcals.json', function(data) {
 
+					$(salePriceOne[0]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'nomilk' && e.kcal == 1800;
+						})[0].price * SMALLSALE)
+					);
+
+					$(salePriceOne[1]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'nomilk' && e.kcal == 1800;
+						})[0].price)
+					);
+
+					$(salePriceOne[2]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'nomilk' && e.kcal == 1800;
+						})[0].price * SMALLSALE)
+					);
+
+					$(salePriceOne[3]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'nomilk' && e.kcal == 1800;
+						})[0].price * SMALLSALE)
+					);
+
 					$(sale[0]).text(
 						(_.filter(data.kcals, function(e) {
 							return e.diet == 'nomilk' && e.kcal == 1800;
@@ -4126,6 +4612,30 @@ $(document).ready(() => {
 			if (input.prop('checked') == true) {
 				e.preventDefault();
 				$.getJSON('js/kcals.json', function(data) {
+
+					$(salePriceOne[0]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'nomilk' && e.kcal == 2100;
+						})[0].price * SMALLSALE)
+					);
+
+					$(salePriceOne[1]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'nomilk' && e.kcal == 2100;
+						})[0].price)
+					);
+
+					$(salePriceOne[2]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'nomilk' && e.kcal == 2100;
+						})[0].price * SMALLSALE)
+					);
+
+					$(salePriceOne[3]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'nomilk' && e.kcal == 2100;
+						})[0].price * SMALLSALE)
+					);
 
 					$(sale[0]).text(
 						(_.filter(data.kcals, function(e) {
@@ -4279,10 +4789,35 @@ $(document).ready(() => {
 		let ratePrice = $('.price-content-price');
 		let rateTotal = $('.price-content-total');
 		let sale = $('.salePrice');
+		let salePriceOne = $('.salePriceOne');
 		$(kcal[0]).on('click', (e) => {
 			if (input.prop('checked') == true) {
 				e.preventDefault();
 				$.getJSON('js/kcals.json', function(data) {
+
+					$(salePriceOne[0]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'vegan' && e.kcal == 1000;
+						})[0].price * SMALLSALE)
+					);
+
+					$(salePriceOne[1]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'vegan' && e.kcal == 1000;
+						})[0].price)
+					);
+
+					$(salePriceOne[2]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'vegan' && e.kcal == 1000;
+						})[0].price * SMALLSALE)
+					);
+
+					$(salePriceOne[3]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'vegan' && e.kcal == 1000;
+						})[0].price * SMALLSALE)
+					);
 
 					$(sale[0]).text(
 						(_.filter(data.kcals, function(e) {
@@ -4425,6 +4960,30 @@ $(document).ready(() => {
 				e.preventDefault();
 				$.getJSON('js/kcals.json', function(data) {
 
+					$(salePriceOne[0]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'vegan' && e.kcal == 1200;
+						})[0].price * SMALLSALE)
+					);
+
+					$(salePriceOne[1]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'vegan' && e.kcal == 1200;
+						})[0].price)
+					);
+
+					$(salePriceOne[2]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'vegan' && e.kcal == 1200;
+						})[0].price * SMALLSALE)
+					);
+
+					$(salePriceOne[3]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'vegan' && e.kcal == 1200;
+						})[0].price * SMALLSALE)
+					);
+
 					$(sale[0]).text(
 						(_.filter(data.kcals, function(e) {
 							return e.diet == 'vegan' && e.kcal == 1200;
@@ -4565,6 +5124,30 @@ $(document).ready(() => {
 			if (input.prop('checked') == true) {
 				e.preventDefault();
 				$.getJSON('js/kcals.json', function(data) {
+
+					$(salePriceOne[0]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'vegan' && e.kcal == 1500;
+						})[0].price * SMALLSALE)
+					);
+
+					$(salePriceOne[1]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'vegan' && e.kcal == 1500;
+						})[0].price)
+					);
+
+					$(salePriceOne[2]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'vegan' && e.kcal == 1500;
+						})[0].price * SMALLSALE)
+					);
+
+					$(salePriceOne[3]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'vegan' && e.kcal == 1500;
+						})[0].price * SMALLSALE)
+					);
 
 					$(sale[0]).text(
 						(_.filter(data.kcals, function(e) {
@@ -4707,6 +5290,30 @@ $(document).ready(() => {
 				e.preventDefault();
 				$.getJSON('js/kcals.json', function(data) {
 
+					$(salePriceOne[0]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'vegan' && e.kcal == 1800;
+						})[0].price * SMALLSALE)
+					);
+
+					$(salePriceOne[1]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'vegan' && e.kcal == 1800;
+						})[0].price)
+					);
+
+					$(salePriceOne[2]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'vegan' && e.kcal == 1800;
+						})[0].price * SMALLSALE)
+					);
+
+					$(salePriceOne[3]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'vegan' && e.kcal == 1800;
+						})[0].price * SMALLSALE)
+					);
+
 					$(sale[0]).text(
 						(_.filter(data.kcals, function(e) {
 							return e.diet == 'vegan' && e.kcal == 1800;
@@ -4847,6 +5454,30 @@ $(document).ready(() => {
 			if (input.prop('checked') == true) {
 				e.preventDefault();
 				$.getJSON('js/kcals.json', function(data) {
+
+					$(salePriceOne[0]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'vegan' && e.kcal == 2100;
+						})[0].price * SMALLSALE)
+					);
+
+					$(salePriceOne[1]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'vegan' && e.kcal == 2100;
+						})[0].price)
+					);
+
+					$(salePriceOne[2]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'vegan' && e.kcal == 2100;
+						})[0].price * SMALLSALE)
+					);
+
+					$(salePriceOne[3]).text(
+						Math.round(_.filter(data.kcals, function(e) {
+							return e.diet == 'vegan' && e.kcal == 2100;
+						})[0].price * SMALLSALE)
+					);
 
 					$(sale[0]).text(
 						(_.filter(data.kcals, function(e) {
