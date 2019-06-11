@@ -58,17 +58,23 @@
 		align-items center
 		&-logo
 			flex-basis 15%
+		&-cont
+			display flex
+			justify-content space-between
+			flex-basis 25%
 		&-desc
 			font-size 0.825rem
 			line-height 18px
 			font-family $Light
 			color $text
 			position relative
-			flex-basis 15%
+			flex-basis 45%
+			display flex
+			align-items center
 			&:after
 				content ''
 				position absolute
-				bottom 0px
+				bottom 20px
 				background-color rgba(116, 195, 97, 0.2)
 				height 6px
 				width 120px
@@ -360,6 +366,8 @@
 	.header
 		.header
 			&__container2
+				&-cont
+					flex-basis 35%
 				&-menu
 					.menu__item
 						margin-right 20px

@@ -52,10 +52,16 @@
 			.swiper-container
 				overflow visible
 			.swiper-slide
+				&:nth-child(1)
+					.price__container-slider-slide
+						.price-footer
+							background-color #69A6DF
+							&:before
+								border-right 10px solid #69A6DF
+								border-bottom 10px solid #69A6DF
 				&:nth-child(4)
 					.price__container-slider-slide
 						.price-footer
-							background $green
 							&:before
 								border-right 10px solid $green
 								border-bottom 10px solid $green
@@ -186,7 +192,6 @@
 						.price-content-total
 							margin-bottom 20px
 				.price-footer
-					background-color #69A6DF
 					padding 20px
 					flex-basis 90%
 					display flex
@@ -194,6 +199,7 @@
 					justify-content center
 					border-radius 10px 10px 10px 0
 					position relative
+					background $green
 					& span
 						font-family $Bold
 						font-size 1.125rem
@@ -206,8 +212,6 @@
 						left -15px
 						bottom 0
 						border 10px solid transparent
-						border-right 10px solid #69A6DF
-						border-bottom 10px solid #69A6DF
 @media(max-width:991px)
 	.price
 		padding 50px 0
