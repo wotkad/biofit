@@ -2,13 +2,13 @@
 $to      = 'mail@mail.ru';
 $subject = 'Заявка на рацион';
 $message =
-'Заявка<div class=""></div>
-Название: ' . $_POST["title"] . ',
-Цель: ' . $_POST["target"] . ',
-Рацион: ' . $_POST["type"] . ',
-Калории: ' . $_POST["kcal"] . ',
-Сумма: ' . $_POST["price"] . ',
-Имя: ' . $_POST["name"] . ',
+'Заявка на рацион.
+Название: ' . $_POST["title"] . '
+Цель: ' . $_POST["target"] . '
+Рацион: ' . $_POST["type"] . '
+Калории: ' . $_POST["kcal"] . '
+Сумма: ' . $_POST["price"] . '
+Имя: ' . $_POST["name"] . '
 Телефон: ' . $_POST["phone"];
 
 $headers = 'From: mail@mail.ru' . "\r\n" .

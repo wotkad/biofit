@@ -92,6 +92,9 @@
 .price__container-slider .swiper-slide:nth-child(1) .price__container-slider-slide .price-content-saleprice:nth-child(5) {
   display: none;
 }
+.price__container-slider .swiper-slide:nth-child(1) .price__container-slider-slide .price-content-price:after {
+  display: none;
+}
 .price__container-slider .swiper-slide:nth-child(2) .price__container-slider-slide .price-content-price:after {
   display: none;
 }

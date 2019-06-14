@@ -404,21 +404,16 @@ $(document).ready(() => {
 		let countPopup = $('#count');
 		let popupPrice = $('#popupPrice');
 		function clearDiet() {
-			$(type).removeClass('diet__type-active');
 			$(type).removeClass('diet__type-hovered');
 			$(kcal).removeClass('diet__blocks-block__type-active');
-			$(target).removeClass('diet__input-active');
 			$(kcalPopup).val('Не выбрано');
 			$(countPopup).val('Не выбрано');
 			$(popupPrice).val('Не выбрано');
 		}
 		$(type[0]).on('click', () => {
 			clearDiet();
-			$(target[0]).addClass('diet__input-active');
-			$(target[0]).children().prop('checked', true);
-			$(type[0]).addClass('diet__type-active');
 			$(type[0]).addClass('diet__type-hovered');
-			$(type[2]).addClass('diet__type-active');
+
 			$(kcal[0]).addClass('diet__blocks-block__type-active');
 			$(kcal[1]).addClass('diet__blocks-block__type-active');
 			$(kcal[2]).addClass('diet__blocks-block__type-active');
@@ -427,10 +422,8 @@ $(document).ready(() => {
 		});
 		$(type[1]).on('click', () => {
 			clearDiet();
-			$(target[1]).addClass('diet__input-active');
-			$(target[1]).children().prop('checked', true);
-			$(type[1]).addClass('diet__type-active');
 			$(type[1]).addClass('diet__type-hovered');
+
 			$(kcal[3]).addClass('diet__blocks-block__type-active');
 			$(kcal[4]).addClass('diet__blocks-block__type-active');
 			$(typePopup).val($(type[1]).children().val());
@@ -438,26 +431,16 @@ $(document).ready(() => {
 		});
 		$(type[2]).on('click', () => {
 			clearDiet();
-			$(target[0]).children().prop('checked', true);
-			$(target[0]).addClass('diet__input-active');
-			$(type[0]).addClass('diet__type-active');
-			$(type[2]).addClass('diet__type-active');
 			$(type[2]).addClass('diet__type-hovered');
+
 			$(kcal[1]).addClass('diet__blocks-block__type-active');
 			$(typePopup).val($(type[2]).children().val());
 			$(targetPopup).val($(target[0]).children().val());
 		});
 		$(type[3]).on('click', () => {
 			clearDiet();
-			$(target[2]).addClass('diet__input-active');
-			$(target[2]).children().prop('checked', true);
-			$(type[0]).addClass('diet__type-active');
-			$(type[1]).addClass('diet__type-active');
-			$(type[3]).addClass('diet__type-active');
 			$(type[3]).addClass('diet__type-hovered');
-			$(type[4]).addClass('diet__type-active');
-			$(type[5]).addClass('diet__type-active');
-			$(type[6]).addClass('diet__type-active');
+
 			$(kcal[0]).addClass('diet__blocks-block__type-active');
 			$(kcal[1]).addClass('diet__blocks-block__type-active');
 			$(kcal[2]).addClass('diet__blocks-block__type-active');
@@ -468,15 +451,8 @@ $(document).ready(() => {
 		});
 		$(type[4]).on('click', () => {
 			clearDiet();
-			$(target[2]).addClass('diet__input-active');
-			$(target[2]).children().prop('checked', true);
-			$(type[0]).addClass('diet__type-active');
-			$(type[1]).addClass('diet__type-active');
-			$(type[3]).addClass('diet__type-active');
-			$(type[4]).addClass('diet__type-active');
 			$(type[4]).addClass('diet__type-hovered');
-			$(type[5]).addClass('diet__type-active');
-			$(type[6]).addClass('diet__type-active');
+
 			$(kcal[0]).addClass('diet__blocks-block__type-active');
 			$(kcal[1]).addClass('diet__blocks-block__type-active');
 			$(kcal[2]).addClass('diet__blocks-block__type-active');
@@ -487,15 +463,8 @@ $(document).ready(() => {
 		});
 		$(type[5]).on('click', () => {
 			clearDiet();
-			$(target[2]).addClass('diet__input-active');
-			$(target[2]).children().prop('checked', true);
-			$(type[0]).addClass('diet__type-active');
-			$(type[1]).addClass('diet__type-active');
-			$(type[3]).addClass('diet__type-active');
-			$(type[4]).addClass('diet__type-active');
-			$(type[5]).addClass('diet__type-active');
 			$(type[5]).addClass('diet__type-hovered');
-			$(type[6]).addClass('diet__type-active');
+
 			$(kcal[0]).addClass('diet__blocks-block__type-active');
 			$(kcal[1]).addClass('diet__blocks-block__type-active');
 			$(kcal[2]).addClass('diet__blocks-block__type-active');
@@ -506,15 +475,9 @@ $(document).ready(() => {
 		});
 		$(type[6]).on('click', () => {
 			clearDiet();
-			$(target[2]).addClass('diet__input-active');
 			$(target[2]).children().prop('checked', true);
-			$(type[0]).addClass('diet__type-active');
-			$(type[1]).addClass('diet__type-active');
-			$(type[3]).addClass('diet__type-active');
-			$(type[4]).addClass('diet__type-active');
-			$(type[5]).addClass('diet__type-active');
-			$(type[6]).addClass('diet__type-active');
 			$(type[6]).addClass('diet__type-hovered');
+
 			$(kcal[0]).addClass('diet__blocks-block__type-active');
 			$(kcal[1]).addClass('diet__blocks-block__type-active');
 			$(kcal[2]).addClass('diet__blocks-block__type-active');
@@ -1231,7 +1194,7 @@ $(document).ready(() => {
 					$(salePriceOne[0]).text(
 						Math.round(_.filter(data.kcals, function(e) {
 							return e.diet == 'decline' && e.kcal == 1000;
-						})[0].price * SMALLSALE)
+						})[0].price * SALE)
 					);
 
 					$(salePriceOne[1]).text(
@@ -1249,7 +1212,7 @@ $(document).ready(() => {
 					$(salePriceOne[3]).text(
 						Math.round(_.filter(data.kcals, function(e) {
 							return e.diet == 'decline' && e.kcal == 1000;
-						})[0].price * SMALLSALE)
+						})[0].price * SALE)
 					);
 
 					$(sale[0]).text(
@@ -1297,7 +1260,7 @@ $(document).ready(() => {
 
 					$(rateTotal[0]).text(_.filter(data.kcals, function(e) {
 						return e.diet == 'decline' && e.kcal == 1000;
-					})[0].price * SALE + ' руб');
+					})[0].price + ' руб');
 
 					$(rateTotal[1]).text(_.filter(data.kcals, function(e) {
 						return e.diet == 'decline' && e.kcal == 1000;
@@ -1396,7 +1359,7 @@ $(document).ready(() => {
 					$(salePriceOne[0]).text(
 						Math.round(_.filter(data.kcals, function(e) {
 							return e.diet == 'decline' && e.kcal == 1200;
-						})[0].price * SMALLSALE)
+						})[0].price * SALE)
 					);
 
 					$(salePriceOne[1]).text(
@@ -1414,7 +1377,7 @@ $(document).ready(() => {
 					$(salePriceOne[3]).text(
 						Math.round(_.filter(data.kcals, function(e) {
 							return e.diet == 'decline' && e.kcal == 1200;
-						})[0].price * SMALLSALE)
+						})[0].price * SALE)
 					);
 
 					$(sale[0]).text(
@@ -1462,7 +1425,7 @@ $(document).ready(() => {
 
 					$(rateTotal[0]).text(_.filter(data.kcals, function(e) {
 						return e.diet == 'decline' && e.kcal == 1200;
-					})[0].price * SALE + ' руб');
+					})[0].price + ' руб');
 
 					$(rateTotal[1]).text(_.filter(data.kcals, function(e) {
 						return e.diet == 'decline' && e.kcal == 1200;
@@ -1561,7 +1524,7 @@ $(document).ready(() => {
 					$(salePriceOne[0]).text(
 						Math.round(_.filter(data.kcals, function(e) {
 							return e.diet == 'decline' && e.kcal == 1500;
-						})[0].price * SMALLSALE)
+						})[0].price * SALE)
 					);
 
 					$(salePriceOne[1]).text(
@@ -1579,7 +1542,7 @@ $(document).ready(() => {
 					$(salePriceOne[3]).text(
 						Math.round(_.filter(data.kcals, function(e) {
 							return e.diet == 'decline' && e.kcal == 1500;
-						})[0].price * SMALLSALE)
+						})[0].price * SALE)
 					);
 
 					$(sale[0]).text(
@@ -1627,7 +1590,7 @@ $(document).ready(() => {
 
 					$(rateTotal[0]).text(_.filter(data.kcals, function(e) {
 						return e.diet == 'decline' && e.kcal == 1500;
-					})[0].price * SALE + ' руб');
+					})[0].price + ' руб');
 
 					$(rateTotal[1]).text(_.filter(data.kcals, function(e) {
 						return e.diet == 'decline' && e.kcal == 1500;
@@ -1743,7 +1706,7 @@ $(document).ready(() => {
 					$(salePriceOne[0]).text(
 						Math.round(_.filter(data.kcals, function(e) {
 							return e.diet == 'balance' && e.kcal == 1800;
-						})[0].price * SMALLSALE)
+						})[0].price * SALE)
 					);
 
 					$(salePriceOne[1]).text(
@@ -1761,7 +1724,7 @@ $(document).ready(() => {
 					$(salePriceOne[3]).text(
 						Math.round(_.filter(data.kcals, function(e) {
 							return e.diet == 'balance' && e.kcal == 1800;
-						})[0].price * SMALLSALE)
+						})[0].price * SALE)
 					);
 
 					$(sale[0]).text(
@@ -1809,7 +1772,7 @@ $(document).ready(() => {
 
 					$(rateTotal[0]).text(_.filter(data.kcals, function(e) {
 						return e.diet == 'balance' && e.kcal == 1800;
-					})[0].price * SALE + ' руб');
+					})[0].price + ' руб');
 
 					$(rateTotal[1]).text(_.filter(data.kcals, function(e) {
 						return e.diet == 'balance' && e.kcal == 1800;
@@ -1908,7 +1871,7 @@ $(document).ready(() => {
 					$(salePriceOne[0]).text(
 						Math.round(_.filter(data.kcals, function(e) {
 							return e.diet == 'balance' && e.kcal == 2100;
-						})[0].price * SMALLSALE)
+						})[0].price * SALE)
 					);
 
 					$(salePriceOne[1]).text(
@@ -1926,7 +1889,7 @@ $(document).ready(() => {
 					$(salePriceOne[3]).text(
 						Math.round(_.filter(data.kcals, function(e) {
 							return e.diet == 'balance' && e.kcal == 2100;
-						})[0].price * SMALLSALE)
+						})[0].price * SALE)
 					);
 
 					$(sale[0]).text(
@@ -1974,7 +1937,7 @@ $(document).ready(() => {
 
 					$(rateTotal[0]).text(_.filter(data.kcals, function(e) {
 						return e.diet == 'balance' && e.kcal == 2100;
-					})[0].price * SALE + ' руб');
+					})[0].price + ' руб');
 
 					$(rateTotal[1]).text(_.filter(data.kcals, function(e) {
 						return e.diet == 'balance' && e.kcal == 2100;
@@ -2090,7 +2053,7 @@ $(document).ready(() => {
 					$(salePriceOne[0]).text(
 						Math.round(_.filter(data.kcals, function(e) {
 							return e.diet == 'detox' && e.kcal == 1200;
-						})[0].price * SMALLSALE)
+						})[0].price * SALE)
 					);
 
 					$(salePriceOne[1]).text(
@@ -2108,7 +2071,7 @@ $(document).ready(() => {
 					$(salePriceOne[3]).text(
 						Math.round(_.filter(data.kcals, function(e) {
 							return e.diet == 'detox' && e.kcal == 1200;
-						})[0].price * SMALLSALE)
+						})[0].price * SALE)
 					);
 
 					$(sale[0]).text(
@@ -2156,7 +2119,7 @@ $(document).ready(() => {
 
 					$(rateTotal[0]).text(_.filter(data.kcals, function(e) {
 						return e.diet == 'detox' && e.kcal == 1200;
-					})[0].price * SALE + ' руб');
+					})[0].price + ' руб');
 
 					$(rateTotal[1]).text(_.filter(data.kcals, function(e) {
 						return e.diet == 'detox' && e.kcal == 1200;
@@ -2272,7 +2235,7 @@ $(document).ready(() => {
 					$(salePriceOne[0]).text(
 						Math.round(_.filter(data.kcals, function(e) {
 							return e.diet == 'nofish' && e.kcal == 1000;
-						})[0].price * SMALLSALE)
+						})[0].price * SALE)
 					);
 
 					$(salePriceOne[1]).text(
@@ -2290,7 +2253,7 @@ $(document).ready(() => {
 					$(salePriceOne[3]).text(
 						Math.round(_.filter(data.kcals, function(e) {
 							return e.diet == 'nofish' && e.kcal == 1000;
-						})[0].price * SMALLSALE)
+						})[0].price * SALE)
 					);
 
 					$(sale[0]).text(
@@ -2338,7 +2301,7 @@ $(document).ready(() => {
 
 					$(rateTotal[0]).text(_.filter(data.kcals, function(e) {
 						return e.diet == 'nofish' && e.kcal == 1000;
-					})[0].price * SALE + ' руб');
+					})[0].price + ' руб');
 
 					$(rateTotal[1]).text(_.filter(data.kcals, function(e) {
 						return e.diet == 'nofish' && e.kcal == 1000;
@@ -2437,7 +2400,7 @@ $(document).ready(() => {
 					$(salePriceOne[0]).text(
 						Math.round(_.filter(data.kcals, function(e) {
 							return e.diet == 'nofish' && e.kcal == 1200;
-						})[0].price * SMALLSALE)
+						})[0].price * SALE)
 					);
 
 					$(salePriceOne[1]).text(
@@ -2455,7 +2418,7 @@ $(document).ready(() => {
 					$(salePriceOne[3]).text(
 						Math.round(_.filter(data.kcals, function(e) {
 							return e.diet == 'nofish' && e.kcal == 1200;
-						})[0].price * SMALLSALE)
+						})[0].price * SALE)
 					);
 
 					$(sale[0]).text(
@@ -2503,7 +2466,7 @@ $(document).ready(() => {
 
 					$(rateTotal[0]).text(_.filter(data.kcals, function(e) {
 						return e.diet == 'nofish' && e.kcal == 1200;
-					})[0].price * SALE + ' руб');
+					})[0].price + ' руб');
 
 					$(rateTotal[1]).text(_.filter(data.kcals, function(e) {
 						return e.diet == 'nofish' && e.kcal == 1200;
@@ -2602,7 +2565,7 @@ $(document).ready(() => {
 					$(salePriceOne[0]).text(
 						Math.round(_.filter(data.kcals, function(e) {
 							return e.diet == 'nofish' && e.kcal == 1500;
-						})[0].price * SMALLSALE)
+						})[0].price * SALE)
 					);
 
 					$(salePriceOne[1]).text(
@@ -2620,7 +2583,7 @@ $(document).ready(() => {
 					$(salePriceOne[3]).text(
 						Math.round(_.filter(data.kcals, function(e) {
 							return e.diet == 'nofish' && e.kcal == 1500;
-						})[0].price * SMALLSALE)
+						})[0].price * SALE)
 					);
 
 					$(sale[0]).text(
@@ -2668,7 +2631,7 @@ $(document).ready(() => {
 
 					$(rateTotal[0]).text(_.filter(data.kcals, function(e) {
 						return e.diet == 'nofish' && e.kcal == 1500;
-					})[0].price * SALE + ' руб');
+					})[0].price + ' руб');
 
 					$(rateTotal[1]).text(_.filter(data.kcals, function(e) {
 						return e.diet == 'nofish' && e.kcal == 1500;
@@ -2767,7 +2730,7 @@ $(document).ready(() => {
 					$(salePriceOne[0]).text(
 						Math.round(_.filter(data.kcals, function(e) {
 							return e.diet == 'nofish' && e.kcal == 1800;
-						})[0].price * SMALLSALE)
+						})[0].price * SALE)
 					);
 
 					$(salePriceOne[1]).text(
@@ -2785,7 +2748,7 @@ $(document).ready(() => {
 					$(salePriceOne[3]).text(
 						Math.round(_.filter(data.kcals, function(e) {
 							return e.diet == 'nofish' && e.kcal == 1800;
-						})[0].price * SMALLSALE)
+						})[0].price * SALE)
 					);
 
 					$(sale[0]).text(
@@ -2833,7 +2796,7 @@ $(document).ready(() => {
 
 					$(rateTotal[0]).text(_.filter(data.kcals, function(e) {
 						return e.diet == 'nofish' && e.kcal == 1800;
-					})[0].price * SALE + ' руб');
+					})[0].price + ' руб');
 
 					$(rateTotal[1]).text(_.filter(data.kcals, function(e) {
 						return e.diet == 'nofish' && e.kcal == 1800;
@@ -2932,7 +2895,7 @@ $(document).ready(() => {
 					$(salePriceOne[0]).text(
 						Math.round(_.filter(data.kcals, function(e) {
 							return e.diet == 'nofish' && e.kcal == 2100;
-						})[0].price * SMALLSALE)
+						})[0].price * SALE)
 					);
 
 					$(salePriceOne[1]).text(
@@ -2950,7 +2913,7 @@ $(document).ready(() => {
 					$(salePriceOne[3]).text(
 						Math.round(_.filter(data.kcals, function(e) {
 							return e.diet == 'nofish' && e.kcal == 2100;
-						})[0].price * SMALLSALE)
+						})[0].price * SALE)
 					);
 
 					$(sale[0]).text(
@@ -2998,7 +2961,7 @@ $(document).ready(() => {
 
 					$(rateTotal[0]).text(_.filter(data.kcals, function(e) {
 						return e.diet == 'nofish' && e.kcal == 2100;
-					})[0].price * SALE + ' руб');
+					})[0].price + ' руб');
 
 					$(rateTotal[1]).text(_.filter(data.kcals, function(e) {
 						return e.diet == 'nofish' && e.kcal == 2100;
@@ -3114,7 +3077,7 @@ $(document).ready(() => {
 					$(salePriceOne[0]).text(
 						Math.round(_.filter(data.kcals, function(e) {
 							return e.diet == 'nomeat' && e.kcal == 1000;
-						})[0].price * SMALLSALE)
+						})[0].price * SALE)
 					);
 
 					$(salePriceOne[1]).text(
@@ -3132,7 +3095,7 @@ $(document).ready(() => {
 					$(salePriceOne[3]).text(
 						Math.round(_.filter(data.kcals, function(e) {
 							return e.diet == 'nomeat' && e.kcal == 1000;
-						})[0].price * SMALLSALE)
+						})[0].price * SALE)
 					);
 
 					$(sale[0]).text(
@@ -3180,7 +3143,7 @@ $(document).ready(() => {
 
 					$(rateTotal[0]).text(_.filter(data.kcals, function(e) {
 						return e.diet == 'nomeat' && e.kcal == 1000;
-					})[0].price * SALE + ' руб');
+					})[0].price + ' руб');
 
 					$(rateTotal[1]).text(_.filter(data.kcals, function(e) {
 						return e.diet == 'nomeat' && e.kcal == 1000;
@@ -3279,7 +3242,7 @@ $(document).ready(() => {
 					$(salePriceOne[0]).text(
 						Math.round(_.filter(data.kcals, function(e) {
 							return e.diet == 'nomeat' && e.kcal == 1200;
-						})[0].price * SMALLSALE)
+						})[0].price * SALE)
 					);
 
 					$(salePriceOne[1]).text(
@@ -3297,7 +3260,7 @@ $(document).ready(() => {
 					$(salePriceOne[3]).text(
 						Math.round(_.filter(data.kcals, function(e) {
 							return e.diet == 'nomeat' && e.kcal == 1200;
-						})[0].price * SMALLSALE)
+						})[0].price * SALE)
 					);
 
 					$(sale[0]).text(
@@ -3345,7 +3308,7 @@ $(document).ready(() => {
 
 					$(rateTotal[0]).text(_.filter(data.kcals, function(e) {
 						return e.diet == 'nomeat' && e.kcal == 1200;
-					})[0].price * SALE + ' руб');
+					})[0].price + ' руб');
 
 					$(rateTotal[1]).text(_.filter(data.kcals, function(e) {
 						return e.diet == 'nomeat' && e.kcal == 1200;
@@ -3444,7 +3407,7 @@ $(document).ready(() => {
 					$(salePriceOne[0]).text(
 						Math.round(_.filter(data.kcals, function(e) {
 							return e.diet == 'nomeat' && e.kcal == 1500;
-						})[0].price * SMALLSALE)
+						})[0].price * SALE)
 					);
 
 					$(salePriceOne[1]).text(
@@ -3462,7 +3425,7 @@ $(document).ready(() => {
 					$(salePriceOne[3]).text(
 						Math.round(_.filter(data.kcals, function(e) {
 							return e.diet == 'nomeat' && e.kcal == 1500;
-						})[0].price * SMALLSALE)
+						})[0].price * SALE)
 					);
 
 					$(sale[0]).text(
@@ -3510,7 +3473,7 @@ $(document).ready(() => {
 
 					$(rateTotal[0]).text(_.filter(data.kcals, function(e) {
 						return e.diet == 'nomeat' && e.kcal == 1500;
-					})[0].price * SALE + ' руб');
+					})[0].price + ' руб');
 
 					$(rateTotal[1]).text(_.filter(data.kcals, function(e) {
 						return e.diet == 'nomeat' && e.kcal == 1500;
@@ -3609,7 +3572,7 @@ $(document).ready(() => {
 					$(salePriceOne[0]).text(
 						Math.round(_.filter(data.kcals, function(e) {
 							return e.diet == 'nomeat' && e.kcal == 1800;
-						})[0].price * SMALLSALE)
+						})[0].price * SALE)
 					);
 
 					$(salePriceOne[1]).text(
@@ -3627,7 +3590,7 @@ $(document).ready(() => {
 					$(salePriceOne[3]).text(
 						Math.round(_.filter(data.kcals, function(e) {
 							return e.diet == 'nomeat' && e.kcal == 1800;
-						})[0].price * SMALLSALE)
+						})[0].price * SALE)
 					);
 
 					$(sale[0]).text(
@@ -3675,7 +3638,7 @@ $(document).ready(() => {
 
 					$(rateTotal[0]).text(_.filter(data.kcals, function(e) {
 						return e.diet == 'nomeat' && e.kcal == 1800;
-					})[0].price * SALE + ' руб');
+					})[0].price + ' руб');
 
 					$(rateTotal[1]).text(_.filter(data.kcals, function(e) {
 						return e.diet == 'nomeat' && e.kcal == 1800;
@@ -3774,7 +3737,7 @@ $(document).ready(() => {
 					$(salePriceOne[0]).text(
 						Math.round(_.filter(data.kcals, function(e) {
 							return e.diet == 'nomeat' && e.kcal == 2100;
-						})[0].price * SMALLSALE)
+						})[0].price * SALE)
 					);
 
 					$(salePriceOne[1]).text(
@@ -3792,7 +3755,7 @@ $(document).ready(() => {
 					$(salePriceOne[3]).text(
 						Math.round(_.filter(data.kcals, function(e) {
 							return e.diet == 'nomeat' && e.kcal == 2100;
-						})[0].price * SMALLSALE)
+						})[0].price * SALE)
 					);
 
 					$(sale[0]).text(
@@ -3840,7 +3803,7 @@ $(document).ready(() => {
 
 					$(rateTotal[0]).text(_.filter(data.kcals, function(e) {
 						return e.diet == 'nomeat' && e.kcal == 2100;
-					})[0].price * SALE + ' руб');
+					})[0].price + ' руб');
 
 					$(rateTotal[1]).text(_.filter(data.kcals, function(e) {
 						return e.diet == 'nomeat' && e.kcal == 2100;
@@ -3956,7 +3919,7 @@ $(document).ready(() => {
 					$(salePriceOne[0]).text(
 						Math.round(_.filter(data.kcals, function(e) {
 							return e.diet == 'nomilk' && e.kcal == 1000;
-						})[0].price * SMALLSALE)
+						})[0].price * SALE)
 					);
 
 					$(salePriceOne[1]).text(
@@ -3974,7 +3937,7 @@ $(document).ready(() => {
 					$(salePriceOne[3]).text(
 						Math.round(_.filter(data.kcals, function(e) {
 							return e.diet == 'nomilk' && e.kcal == 1000;
-						})[0].price * SMALLSALE)
+						})[0].price * SALE)
 					);
 
 					$(sale[0]).text(
@@ -4022,7 +3985,7 @@ $(document).ready(() => {
 
 					$(rateTotal[0]).text(_.filter(data.kcals, function(e) {
 						return e.diet == 'nomilk' && e.kcal == 1000;
-					})[0].price * SALE + ' руб');
+					})[0].price + ' руб');
 
 					$(rateTotal[1]).text(_.filter(data.kcals, function(e) {
 						return e.diet == 'nomilk' && e.kcal == 1000;
@@ -4121,7 +4084,7 @@ $(document).ready(() => {
 					$(salePriceOne[0]).text(
 						Math.round(_.filter(data.kcals, function(e) {
 							return e.diet == 'nomilk' && e.kcal == 1200;
-						})[0].price * SMALLSALE)
+						})[0].price * SALE)
 					);
 
 					$(salePriceOne[1]).text(
@@ -4139,7 +4102,7 @@ $(document).ready(() => {
 					$(salePriceOne[3]).text(
 						Math.round(_.filter(data.kcals, function(e) {
 							return e.diet == 'nomilk' && e.kcal == 1200;
-						})[0].price * SMALLSALE)
+						})[0].price * SALE)
 					);
 
 					$(sale[0]).text(
@@ -4187,7 +4150,7 @@ $(document).ready(() => {
 
 					$(rateTotal[0]).text(_.filter(data.kcals, function(e) {
 						return e.diet == 'nomilk' && e.kcal == 1200;
-					})[0].price * SALE + ' руб');
+					})[0].price + ' руб');
 
 					$(rateTotal[1]).text(_.filter(data.kcals, function(e) {
 						return e.diet == 'nomilk' && e.kcal == 1200;
@@ -4286,7 +4249,7 @@ $(document).ready(() => {
 					$(salePriceOne[0]).text(
 						Math.round(_.filter(data.kcals, function(e) {
 							return e.diet == 'nomilk' && e.kcal == 1500;
-						})[0].price * SMALLSALE)
+						})[0].price * SALE)
 					);
 
 					$(salePriceOne[1]).text(
@@ -4304,7 +4267,7 @@ $(document).ready(() => {
 					$(salePriceOne[3]).text(
 						Math.round(_.filter(data.kcals, function(e) {
 							return e.diet == 'nomilk' && e.kcal == 1500;
-						})[0].price * SMALLSALE)
+						})[0].price * SALE)
 					);
 
 					$(sale[0]).text(
@@ -4352,7 +4315,7 @@ $(document).ready(() => {
 
 					$(rateTotal[0]).text(_.filter(data.kcals, function(e) {
 						return e.diet == 'nomilk' && e.kcal == 1500;
-					})[0].price * SALE + ' руб');
+					})[0].price + ' руб');
 
 					$(rateTotal[1]).text(_.filter(data.kcals, function(e) {
 						return e.diet == 'nomilk' && e.kcal == 1500;
@@ -4451,7 +4414,7 @@ $(document).ready(() => {
 					$(salePriceOne[0]).text(
 						Math.round(_.filter(data.kcals, function(e) {
 							return e.diet == 'nomilk' && e.kcal == 1800;
-						})[0].price * SMALLSALE)
+						})[0].price * SALE)
 					);
 
 					$(salePriceOne[1]).text(
@@ -4469,7 +4432,7 @@ $(document).ready(() => {
 					$(salePriceOne[3]).text(
 						Math.round(_.filter(data.kcals, function(e) {
 							return e.diet == 'nomilk' && e.kcal == 1800;
-						})[0].price * SMALLSALE)
+						})[0].price * SALE)
 					);
 
 					$(sale[0]).text(
@@ -4517,7 +4480,7 @@ $(document).ready(() => {
 
 					$(rateTotal[0]).text(_.filter(data.kcals, function(e) {
 						return e.diet == 'nomilk' && e.kcal == 1800;
-					})[0].price * SALE + ' руб');
+					})[0].price + ' руб');
 
 					$(rateTotal[1]).text(_.filter(data.kcals, function(e) {
 						return e.diet == 'nomilk' && e.kcal == 1800;
@@ -4616,7 +4579,7 @@ $(document).ready(() => {
 					$(salePriceOne[0]).text(
 						Math.round(_.filter(data.kcals, function(e) {
 							return e.diet == 'nomilk' && e.kcal == 2100;
-						})[0].price * SMALLSALE)
+						})[0].price * SALE)
 					);
 
 					$(salePriceOne[1]).text(
@@ -4634,7 +4597,7 @@ $(document).ready(() => {
 					$(salePriceOne[3]).text(
 						Math.round(_.filter(data.kcals, function(e) {
 							return e.diet == 'nomilk' && e.kcal == 2100;
-						})[0].price * SMALLSALE)
+						})[0].price * SALE)
 					);
 
 					$(sale[0]).text(
@@ -4682,7 +4645,7 @@ $(document).ready(() => {
 
 					$(rateTotal[0]).text(_.filter(data.kcals, function(e) {
 						return e.diet == 'nomilk' && e.kcal == 2100;
-					})[0].price * SALE + ' руб');
+					})[0].price + ' руб');
 
 					$(rateTotal[1]).text(_.filter(data.kcals, function(e) {
 						return e.diet == 'nomilk' && e.kcal == 2100;
@@ -4798,7 +4761,7 @@ $(document).ready(() => {
 					$(salePriceOne[0]).text(
 						Math.round(_.filter(data.kcals, function(e) {
 							return e.diet == 'vegan' && e.kcal == 1000;
-						})[0].price * SMALLSALE)
+						})[0].price * SALE)
 					);
 
 					$(salePriceOne[1]).text(
@@ -4816,7 +4779,7 @@ $(document).ready(() => {
 					$(salePriceOne[3]).text(
 						Math.round(_.filter(data.kcals, function(e) {
 							return e.diet == 'vegan' && e.kcal == 1000;
-						})[0].price * SMALLSALE)
+						})[0].price * SALE)
 					);
 
 					$(sale[0]).text(
@@ -4864,7 +4827,7 @@ $(document).ready(() => {
 
 					$(rateTotal[0]).text(_.filter(data.kcals, function(e) {
 						return e.diet == 'vegan' && e.kcal == 1000;
-					})[0].price * SALE + ' руб');
+					})[0].price + ' руб');
 
 					$(rateTotal[1]).text(_.filter(data.kcals, function(e) {
 						return e.diet == 'vegan' && e.kcal == 1000;
@@ -4963,7 +4926,7 @@ $(document).ready(() => {
 					$(salePriceOne[0]).text(
 						Math.round(_.filter(data.kcals, function(e) {
 							return e.diet == 'vegan' && e.kcal == 1200;
-						})[0].price * SMALLSALE)
+						})[0].price * SALE)
 					);
 
 					$(salePriceOne[1]).text(
@@ -4981,7 +4944,7 @@ $(document).ready(() => {
 					$(salePriceOne[3]).text(
 						Math.round(_.filter(data.kcals, function(e) {
 							return e.diet == 'vegan' && e.kcal == 1200;
-						})[0].price * SMALLSALE)
+						})[0].price * SALE)
 					);
 
 					$(sale[0]).text(
@@ -5029,7 +4992,7 @@ $(document).ready(() => {
 
 					$(rateTotal[0]).text(_.filter(data.kcals, function(e) {
 						return e.diet == 'vegan' && e.kcal == 1200;
-					})[0].price * SALE + ' руб');
+					})[0].price + ' руб');
 
 					$(rateTotal[1]).text(_.filter(data.kcals, function(e) {
 						return e.diet == 'vegan' && e.kcal == 1200;
@@ -5128,7 +5091,7 @@ $(document).ready(() => {
 					$(salePriceOne[0]).text(
 						Math.round(_.filter(data.kcals, function(e) {
 							return e.diet == 'vegan' && e.kcal == 1500;
-						})[0].price * SMALLSALE)
+						})[0].price * SALE)
 					);
 
 					$(salePriceOne[1]).text(
@@ -5146,7 +5109,7 @@ $(document).ready(() => {
 					$(salePriceOne[3]).text(
 						Math.round(_.filter(data.kcals, function(e) {
 							return e.diet == 'vegan' && e.kcal == 1500;
-						})[0].price * SMALLSALE)
+						})[0].price * SALE)
 					);
 
 					$(sale[0]).text(
@@ -5194,7 +5157,7 @@ $(document).ready(() => {
 
 					$(rateTotal[0]).text(_.filter(data.kcals, function(e) {
 						return e.diet == 'vegan' && e.kcal == 1500;
-					})[0].price * SALE + ' руб');
+					})[0].price + ' руб');
 
 					$(rateTotal[1]).text(_.filter(data.kcals, function(e) {
 						return e.diet == 'vegan' && e.kcal == 1500;
@@ -5293,7 +5256,7 @@ $(document).ready(() => {
 					$(salePriceOne[0]).text(
 						Math.round(_.filter(data.kcals, function(e) {
 							return e.diet == 'vegan' && e.kcal == 1800;
-						})[0].price * SMALLSALE)
+						})[0].price * SALE)
 					);
 
 					$(salePriceOne[1]).text(
@@ -5311,7 +5274,7 @@ $(document).ready(() => {
 					$(salePriceOne[3]).text(
 						Math.round(_.filter(data.kcals, function(e) {
 							return e.diet == 'vegan' && e.kcal == 1800;
-						})[0].price * SMALLSALE)
+						})[0].price * SALE)
 					);
 
 					$(sale[0]).text(
@@ -5359,7 +5322,7 @@ $(document).ready(() => {
 
 					$(rateTotal[0]).text(_.filter(data.kcals, function(e) {
 						return e.diet == 'vegan' && e.kcal == 1800;
-					})[0].price * SALE + ' руб');
+					})[0].price + ' руб');
 
 					$(rateTotal[1]).text(_.filter(data.kcals, function(e) {
 						return e.diet == 'vegan' && e.kcal == 1800;
@@ -5458,7 +5421,7 @@ $(document).ready(() => {
 					$(salePriceOne[0]).text(
 						Math.round(_.filter(data.kcals, function(e) {
 							return e.diet == 'vegan' && e.kcal == 2100;
-						})[0].price * SMALLSALE)
+						})[0].price * SALE)
 					);
 
 					$(salePriceOne[1]).text(
@@ -5476,7 +5439,7 @@ $(document).ready(() => {
 					$(salePriceOne[3]).text(
 						Math.round(_.filter(data.kcals, function(e) {
 							return e.diet == 'vegan' && e.kcal == 2100;
-						})[0].price * SMALLSALE)
+						})[0].price * SALE)
 					);
 
 					$(sale[0]).text(
@@ -5524,7 +5487,7 @@ $(document).ready(() => {
 
 					$(rateTotal[0]).text(_.filter(data.kcals, function(e) {
 						return e.diet == 'vegan' && e.kcal == 2100;
-					})[0].price * SALE + ' руб');
+					})[0].price + ' руб');
 
 					$(rateTotal[1]).text(_.filter(data.kcals, function(e) {
 						return e.diet == 'vegan' && e.kcal == 2100;
@@ -5617,5 +5580,30 @@ $(document).ready(() => {
 		});
 	}
 	getKcal6();
+
+	function toggleFaq() {
+		let title = $('.faq__container-item-items-item');
+		let item = $('.faq__container-item-toggle');
+		function clearFaq() {
+			title.removeClass('faq__container-item-items-item-active');
+			item.removeClass('faq__container-item-toggle-active');
+		}
+		$(title[0]).on('click', () => {
+			clearFaq();
+			$(title[0]).addClass('faq__container-item-items-item-active');
+			$(item[0]).addClass('faq__container-item-toggle-active');
+		});
+		$(title[1]).on('click', () => {
+			clearFaq();
+			$(title[1]).addClass('faq__container-item-items-item-active');
+			$(item[1]).addClass('faq__container-item-toggle-active');
+		});
+		$(title[2]).on('click', () => {
+			clearFaq();
+			$(title[2]).addClass('faq__container-item-items-item-active');
+			$(item[2]).addClass('faq__container-item-toggle-active');
+		});
+	}
+	toggleFaq();
 
 });

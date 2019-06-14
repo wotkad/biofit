@@ -98,15 +98,23 @@
   border-color: transparent;
   background-color: #74c361;
 }
+.faq__container-item-items-item-active {
+  color: $white;
+  border-color: transparent;
+  background-color: #74c361;
+}
 .faq__container-item-toggle {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
   margin-bottom: 78px;
+}
+.faq__container-item-toggle-active {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 .faq__container-item-toggle-item {
   -webkit-flex-basis: 100%;
@@ -176,6 +184,12 @@
   font-family: $Regular;
   color: $text;
   line-height: 26px;
+}
+.faq__container-item-toggle-item-text p {
+  margin-bottom: 8px;
+}
+.faq__container-item-toggle-item-text p:last-child {
+  margin-bottom: 0;
 }
 .faq__container-item-toggle-item-active {
   border-color: $green;

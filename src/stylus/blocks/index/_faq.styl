@@ -65,10 +65,16 @@
 						color $white
 						border-color transparent
 						background-color #74C361
+					&-active
+						color $white
+						border-color transparent
+						background-color #74C361
 			&-toggle
-				display flex
+				display none
 				flex-wrap wrap
 				margin-bottom 78px
+				&-active
+					display flex
 				&-item
 					flex-basis 100%
 					flex-wrap wrap
@@ -101,6 +107,10 @@
 						font-family $Regular
 						color $text
 						line-height 26px
+						& p
+							margin-bottom 8px
+							&:last-child
+								margin-bottom 0
 					&-active
 						border-color $green
 						& span

@@ -3206,14 +3206,17 @@ section {
   background-color: #fff;
   -webkit-border-radius: 80px;
           border-radius: 80px;
-  border: 3px solid transparent;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
   position: relative;
+  display: none;
 }
 .diet__container-form .diet__type:nth-child(12) {
   margin-right: 0;
+}
+.diet__container-form .diet__type:hover {
+  background-color: #74c361;
 }
 .diet__container-form .diet__type label {
   cursor: pointer;
@@ -3252,18 +3255,19 @@ section {
   color: #74c361;
 }
 .diet__container-form .diet__type-active {
-  background-color: #74c361;
-  -webkit-box-shadow: 0px 15px 25px rgba(156,217,143,0.4);
-          box-shadow: 0px 15px 25px rgba(156,217,143,0.4);
+  display: block;
 }
 .diet__container-form .diet__type-active label {
-  color: #fff;
+  color: #313131;
 }
 .diet__container-form .diet__type-active:hover label {
   color: #fff;
 }
 .diet__container-form .diet__type-hovered {
-  border-color: #fff;
+  background-color: #74c361;
+}
+.diet__container-form .diet__type-hovered label {
+  color: #fff;
 }
 .diet__container-form .diet__blocks {
   -webkit-flex-basis: 100%;
@@ -4002,6 +4006,9 @@ section {
   display: none;
 }
 .price__container-slider .swiper-slide:nth-child(1) .price__container-slider-slide .price-content-saleprice:nth-child(5) {
+  display: none;
+}
+.price__container-slider .swiper-slide:nth-child(1) .price__container-slider-slide .price-content-price:after {
   display: none;
 }
 .price__container-slider .swiper-slide:nth-child(2) .price__container-slider-slide .price-content-price:after {
@@ -4951,15 +4958,23 @@ section {
   border-color: transparent;
   background-color: #74c361;
 }
+.faq__container-item-items-item-active {
+  color: #fff;
+  border-color: transparent;
+  background-color: #74c361;
+}
 .faq__container-item-toggle {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
   margin-bottom: 78px;
+}
+.faq__container-item-toggle-active {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 .faq__container-item-toggle-item {
   -webkit-flex-basis: 100%;
@@ -5029,6 +5044,12 @@ section {
   font-family: '500';
   color: #535353;
   line-height: 26px;
+}
+.faq__container-item-toggle-item-text p {
+  margin-bottom: 8px;
+}
+.faq__container-item-toggle-item-text p:last-child {
+  margin-bottom: 0;
 }
 .faq__container-item-toggle-item-active {
   border-color: #74c361;

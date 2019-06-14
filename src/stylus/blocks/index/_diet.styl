@@ -157,11 +157,13 @@
 				margin-right 26.5px
 				background-color $white
 				border-radius 80px
-				border 3px solid transparent
 				transition .3s
 				position relative
+				display none
 				&:nth-child(12)
 					margin-right 0
+				&:hover
+					background-color $green
 				& label
 					cursor pointer
 					flex-direction column
@@ -182,15 +184,16 @@
 					&:hover
 						color $green
 				&-active
-					background-color $green
-					box-shadow 0px 15px 25px rgba(156, 217, 143, 0.4)
+					display block
 					& label
-						color $white
+						color #313131
 					&:hover
 						& label
 							color $white
 				&-hovered
-					border-color $white
+					background-color $green
+					& label
+						color $white
 			.diet__blocks
 				flex-basis 100%
 				display grid
